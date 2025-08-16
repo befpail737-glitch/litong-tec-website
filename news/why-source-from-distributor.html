@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | LiTong Distributor</title>
+    <meta name="description" content="Find answers to common questions about ordering from LiTong, product authenticity, sample requests, and technical support for CRRC Times Electric power semiconductors.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Styles specific to FAQ page */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            position: relative;
+        }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (Copy from index.html) -->
+    <header class="header">...</header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs"><div class="container"><ol><li><a href="">Home</a></li><li class="active">FAQ</li></ol></div></div>
+        <div class="page-header"><div class="container"><h1>Frequently Asked Questions</h1><p>Find quick answers to your questions. If you can't find what you're looking for, please don't hesitate to contact us.</p></div></div>
+
+        <section class="content-section">
+            <div class="content-body">
+                <div class="faq-item">
+                    <h3 class="faq-question">Are all your products original and authentic?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. As an officially authorized core distributor for CRRC Times Electric, we guarantee that 100% of our products are original, brand-new, and fully traceable back to the factory. We can provide certificates of conformity and other documentation upon request.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How can I request a sample?</h3>
+                    <div class="faq-answer">
+                        <p>For qualified projects, we are happy to provide engineering samples. The best way is to navigate to the specific product page you are interested in and click the "Request a Sample" button. Alternatively, you can use our main <a href="contact.html">Contact Us</a> page and specify the part number and project details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you provide technical support?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutely. Technical support is a core part of our value proposition. Our team of experienced Field Application Engineers (FAEs) can help with component selection, design review, troubleshooting, and understanding datasheets. Please contact us with your technical query.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <h3 class="faq-question">What is your typical lead time?</h3>
+                    <div class="faq-answer">
+                        <p>For items we have in stock, we can typically ship within 1-2 business days. For factory orders, the lead time varies depending on the specific product and factory capacity. When you request a quote, we will provide you with an accurate and up-to-date lead time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Copy from index.html) -->
+    <footer class="footer">...</footer>
+
+    <script>
+        // JavaScript for FAQ accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+
+                    if (isActive) {
+                        question.classList.remove('active');
+                        question.style.setProperty('--after-content', "'+'");
+                        answer.style.maxHeight = null;
+                    } else {
+                        question.classList.add('active');
+                        question.style.setProperty('--after-content', "'-'");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

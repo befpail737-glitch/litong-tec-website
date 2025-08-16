@@ -1,0 +1,87 @@
+/ (Root Directory)
+├── 404.html                      # Custom "Page Not Found" page
+├── about.html                    # About Us page
+├── contact.html                  # Contact Us page
+├── faq.html                      # Frequently Asked Questions (FAQ) page
+├── index.html                    # Homepage of the website
+├── robots.txt                    # Instructions for search engine crawlers
+├── sitemap.xml                   # Map of all pages for SEO
+│
+├── assets/                       # Folder for all static assets
+│   ├── css/
+│   │   └── style.css             # The single, minified CSS stylesheet for the entire site
+│   ├── js/
+│   │   └── main.js               # The single, minified JavaScript file for site-wide interactivity
+│   ├── icons/                    # SVG icons used throughout the site
+│   │   ├── icon-authorized.svg
+│   │   ├── icon-email.svg
+│   │   ├── icon-frd.svg
+│   │   ├── icon-global.svg
+│   │   ├── icon-igbt.svg
+│   │   ├── icon-inventory.svg
+│   │   ├── icon-location.svg     # (You would create this for the contact page)
+│   │   ├── icon-phone.svg        # (You would create this for the contact page)
+│   │   ├── icon-sic.svg
+│   │   ├── icon-support.svg
+│   │   └── icon-thyristor.svg
+│   └── images/                   # All raster images (JPG, PNG)
+│       ├── about-us.jpg
+│       ├── abstract-bg.svg       # (Background for the hero banner)
+│       ├── apple-touch-icon.png  # (Icon for iOS devices)
+│       ├── logos/
+│       │   ├── crrc-logo.png
+│       │   ├── erai-logo.png
+│       │   └── iso-9001-logo.png
+│       ├── products/
+│       │   ├── t-igbt-g6500.jpg
+│       │   ├── t-igbt-h3300.jpg
+│       │   ├── t-igbt-w1700.jpg
+│       │   ├── t-sic-m1200.jpg
+│       │   └── t-sicsbd-a1200.jpg
+│       ├── solutions/
+│       │   ├── ev-inverter-diagram.svg
+│       │   ├── hvdc-valve-diagram.svg
+│       │   └── rail-traction-diagram.svg
+│       └── team/
+│           ├── john-doe.jpg
+│           └── jane-smith.jpg      # (Headshot for the second FAE)
+│
+├── datasheets/                   # Placeholder folder for your product PDF datasheets
+│   ├── t-igbt-g6500.pdf
+│   ├── t-igbt-h3300.pdf
+│   ├── t-igbt-w1700.pdf
+│   ├── t-sic-m1200.pdf
+│   └── t-sicsbd-a1200.pdf
+│
+├── logos/
+│   └── litong-logo.svg           # Main company logo in SVG format
+│
+├── news/                         # News Center / Blog section
+│   ├── index.html                # Main listing page for all news articles
+│   ├── igbt-market-trends-2025.html
+│   ├── litong-expands-sic-inventory.html
+│   └── why-source-from-distributor.html
+│
+├── products/                     # Main Product Center
+│   ├── index.html                # Main product landing page showing categories
+│   ├── igbt-modules/
+│   │   ├── index.html            # Category page listing all IGBT modules
+│   │   ├── t-igbt-g6500.html
+│   │   ├── t-igbt-h3300.html
+│   │   └── t-igbt-w1700.html
+│   └── sic-devices/
+│       ├── index.html            # Category page listing all SiC devices
+│       ├── t-sic-m1200.html
+│       └── t-sicsbd-a1200.html
+│
+├── solutions/                    # Application Solutions section
+│   ├── index.html                # Main listing page for all solutions
+│   ├── ev-main-inverter.html
+│   ├── rail-traction-inverter.html
+│   └── vsc-hvdc-valve-stack.html
+│
+└── support/                      # Technical Support / Blog section
+    ├── index.html                # Main listing page for all support articles
+    ├── igbt-driver-design.html
+    ├── igbt-failure-analysis.html
+    └── how-to-select-sic-modules.html

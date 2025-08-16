@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 7 IGBT Failure Modes: An FAE's Guide | LiTong</title>
+    <meta name="description" content="A technical guide from LiTong's FAEs on common IGBT failure modes, including short-circuit, over-voltage, and overheating, and how to prevent them in your design.">
+    <link rel="canonical" href="https://www.litong-tec.com/support/igbt-failure-analysis.html" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Schema, Favicons, Analytics here -->
+</head>
+<body>
+    <header class="header">...</header>
+    <main>
+        <div class="breadcrumbs">...</div>
+        <section class="content-section">
+            <div class="content-body">
+                <h1>Top 7 Common Failure Modes in IGBT Modules: An FAE's Perspective</h1>
+                <p class="article-meta">By John Doe, FAE | Published on: August 18, 2025 | Category: Failure Analysis</p>
+                <p>Understanding why IGBTs fail is the first step to designing a robust and reliable system. Here are some of the most common failure modes we encounter in the field and how to mitigate them.</p>
+
+                <h3>1. Short-Circuit Failure</h3>
+                <p><strong>Cause:</strong> A low-impedance path across the DC link, causing massive current to flow through the IGBT. <strong>Prevention:</strong> A fast-acting gate driver with DESAT (desaturation) protection is essential. It must detect the event and safely shut down the IGBT within its rated Short-Circuit Withstand Time (typically 5-10µs).</p>
+
+                <h3>2. Overheating / Thermal Runaway</h3>
+                <p><strong>Cause:</strong> Inadequate cooling, incorrect mounting, or exceeding the module's power dissipation limits. <strong>Prevention:</strong> Perform careful thermal calculations. Ensure your heatsink is correctly sized, use the recommended type and thickness of thermal paste, and apply the correct mounting torque to the module's screws.</p>
+
+                <h3>3. Over-Voltage Failure</h3>
+                <p><strong>Cause:</strong> Voltage overshoot during turn-off, caused by parasitic inductance in the DC busbar. <strong>Prevention:</strong> Minimize the inductance between the DC-link capacitor and the IGBT module. Use laminated busbars and select a high-quality, low-ESL capacitor.</p>
+                
+                <h3>4. Gate Oxide Breakdown</h3>
+                <p><strong>Cause:</strong> Applying excessive voltage to the gate terminal (Vge), often from ESD or a faulty gate driver. <strong>Prevention:</strong> Use proper ESD handling procedures. Ensure your gate driver voltage is well-regulated and clamped within the datasheet limits.</p>
+
+                <!-- Continue with 3 more failure modes -->
+            </div>
+        </section>
+    </main>
+    <footer class="footer">...</footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

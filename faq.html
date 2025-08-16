@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>How to Select SiC Modules for an 800V EV Main Inverter | LiTong</title>
+    <meta name="description" content="A technical guide from LiTong's FAEs on selecting the right CRRC Times Electric SiC module for your 800V EV inverter project. Learn about key parameters like Rds(on), thermal resistance, and packaging.">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Schema.org for Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "How to Select the Right SiC Module for Your 800V EV Main Inverter",
+      "author": {
+        "@type": "Person",
+        "name": "John Doe, FAE" 
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LiTong",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.litong-tec.com/logos/litong-logo.svg"
+        }
+      },
+      "datePublished": "2025-07-20"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header (Copy from index.html) -->
+    <header class="header">
+        <div class="container navbar">
+             <a href="" class="logo"><img src="logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;"></a>
+             <nav><ul class="nav-links"><li><a href="products/">Products</a></li><li><a href="solutions/">Solutions</a></li><li><a href="support/">Technical Support</a></li><li><a href="news/">News</a></li><li><a href="about.html">About Us</a></li></ul></nav>
+             <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="">Home</a></li>
+                    <!-- We will create /support/index.html later -->
+                    <li><a href="support/">Technical Support</a></li>
+                    <li class="active">How to Select SiC Modules...</li>
+                </ol>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <div class="content-body">
+                <h1>How to Select the Right SiC Module for Your 800V EV Main Inverter</h1>
+                <p class="article-meta">By John Doe, FAE | Published on: July 20, 2025 | Category: Selection Guides</p>
+
+                <p>The transition to 800V architectures in electric vehicles is accelerating, and Silicon Carbide (SiC) is the enabling technology. However, selecting the optimal SiC power module is more complex than simply matching voltage and current ratings. This guide covers the critical parameters you must consider to maximize performance and ensure reliability.</p>
+
+                <h2>1. On-Resistance (Rds(on)) vs. Chip Area</h2>
+                <p>Lower Rds(on) means lower conduction losses, which is critical for efficiency. However, a lower Rds(on) usually implies a larger SiC chip area, which increases cost and parasitic capacitance. You need to strike a balance based on your target efficiency and cost. For a typical 200kW inverter, a module like the <a href="products/sic-devices/t-sic-m1200.html">T-SiC-M1200</a> with an Rds(on) in the range of 2-4 mΩ is a good starting point.</p>
+
+                <h2>2. Thermal Resistance (Rth(j-c))</h2>
+                <p>This parameter dictates how efficiently heat can be extracted from the SiC junction to the module's case. A lower Rth(j-c) value is always better, as it means the chip will run cooler for a given power dissipation. CRRC's advanced packaging technologies, such as silver sintering for die attach, are key to achieving industry-leading low thermal resistance.</p>
+
+                <h2>3. Package Stray Inductance</h2>
+                <p>Due to the extremely fast switching speeds of SiC (high di/dt), package stray inductance (Ls) is a critical parameter. High inductance can cause significant voltage overshoot and ringing, potentially damaging the device or causing EMC issues. Look for modules with a low-inductance design, often featuring multiple, symmetric power terminals.</p>
+
+                <h2>4. Short-Circuit Withstand Time (SCWT)</h2>
+                <p>While SiC MOSFETs are known for having a shorter SCWT than Si-IGBTs, automotive applications demand robust protection. Ensure the module you select is rated for a sufficient withstand time (typically 2-3 µs) and that your gate driver has a fast-acting DESAT protection circuit to detect and manage short-circuit events safely.</p>
+                
+                <h3>Conclusion</h3>
+                <blockquote>"Selecting the right SiC module is a multi-faceted decision. It's essential to analyze your system's complete operating profile, not just peak power. By carefully considering Rds(on), thermal performance, and package parasitics, you can fully leverage the benefits of SiC. Our team is ready to help you perform these analyses and select the perfect CRRC Times Electric module for your project."</blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Copy from index.html) -->
+    <footer class="footer">...</footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

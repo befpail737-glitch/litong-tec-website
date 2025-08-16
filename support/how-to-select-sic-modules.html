@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGBT Gate Driver Design Essentials | LiTong Technical Guide</title>
+    <meta name="description" content="Learn the fundamentals of designing a robust gate driver circuit for high-power IGBT modules, covering topics like gate voltage, drive current, and protection circuits.">
+    <link rel="canonical" href="https://www.litong-tec.com/support/igbt-driver-design.html" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Schema, Favicons, Analytics here -->
+</head>
+<body>
+    <header class="header">...</header>
+    <main>
+        <div class="breadcrumbs">...</div>
+        <section class="content-section">
+            <div class="content-body">
+                <h1>A Practical Guide to IGBT Gate Driver Design</h1>
+                <p class="article-meta">By Jane Smith, FAE | Published on: August 16, 2025 | Category: Application Notes</p>
+                <p>A gate driver is the critical interface between your low-voltage controller (MCU/FPGA) and the high-power IGBT. A poor driver design will lead to inefficiency, EMI issues, and even device failure. This guide covers the essential considerations.</p>
+
+                <h2>1. Gate Voltage (Vge)</h2>
+                <p>The gate voltage must be carefully controlled.
+                    <ul>
+                        <li><strong>Turn-On (Vge_on):</strong> Typically +15V. This ensures the IGBT is fully enhanced to minimize conduction losses (VCEsat).</li>
+                        <li><strong>Turn-Off (Vge_off):</strong> A negative voltage (e.g., -8V to -15V) is strongly recommended. This provides a solid turn-off state, preventing accidental turn-on due to Miller capacitance (dV/dt induced turn-on).</li>
+                    </ul>
+                </p>
+
+                <h2>2. Gate Drive Current</h2>
+                <p>The driver must be able to source and sink enough peak current to charge and discharge the IGBT's input capacitance (Cies) quickly. The required current can be estimated by: <strong>I_peak ≈ ΔVge / (Rg_total * t_switch)</strong>. A driver capable of 5-15A peak current is common for modules like the <a href="../products/igbt-modules/t-igbt-h3300.html">T-IGBT-H3300</a>.</p>
+
+                <h2>3. Gate Resistor (Rg)</h2>
+                <p>The external gate resistor is used to control the switching speed (di/dt and dV/dt).
+                    <ul>
+                        <li><strong>Smaller Rg:</strong> Faster switching, lower switching losses, but higher voltage overshoot and EMI.</li>
+                        <li><strong>Larger Rg:</strong> Slower switching, higher switching losses, but less overshoot and "gentler" on the device.</li>
+                    </ul>
+                A separate Rg for turn-on and turn-off is often used for optimal control.</p>
+                
+                <blockquote><strong>FAE Tip:</strong> Always place the gate driver circuit as physically close to the IGBT's gate and emitter terminals as possible. This minimizes the inductance of the gate drive loop, which is critical for preventing oscillations and ensuring clean switching.</blockquote>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">...</footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
