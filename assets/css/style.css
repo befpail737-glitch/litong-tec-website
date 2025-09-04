@@ -1840,3 +1840,14 @@ body .fixed-contact-sidebar {
     display: flex !important;
     visibility: visible !important;
 }
+
+/* Additional debugging styles */
+.fixed-contact-sidebar * {
+    box-sizing: border-box !important;
+}
+
+/* Ensure no bottom positioning */
+.fixed-contact-sidebar {
+    bottom: auto !important;
+    left: auto !important;
+}
