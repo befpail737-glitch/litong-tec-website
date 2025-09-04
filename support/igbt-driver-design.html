@@ -41,73 +41,76 @@
             </div>
         </div>
 
+        <!-- Article Content -->
         <section class="section">
-            <div class="container article-content">
-                <h1>A Practical Guide to IGBT Gate Driver Design</h1>
-                <p class="article-meta">By LiTong FAE Team | Published on: August 16, 2025 | Category: Application Notes</p>
-                <p>A gate driver is the critical interface between your low-voltage controller (MCU/FPGA) and the high-power IGBT. A poor driver design will lead to inefficiency, EMI issues, and even device failure. This guide covers the essential considerations.</p>
+            <div class="container">
+                <div class="article-content">
+                    <h1>A Practical Guide to IGBT Gate Driver Design</h1>
+                    <p class="article-meta">By LiTong FAE Team | Published on: August 16, 2025 | Category: Application Notes</p>
+                    <p>A gate driver is the critical interface between your low-voltage controller (MCU/FPGA) and the high-power IGBT. A poor driver design will lead to inefficiency, EMI issues, and even device failure. This guide covers the essential considerations.</p>
 
-                <h2>1. Gate Voltage (Vge)</h2>
-                <p>The gate voltage must be carefully controlled:</p>
-                <ul>
-                    <li><strong>Turn-On (Vge_on):</strong> Typically +15V. This ensures the IGBT is fully enhanced to minimize conduction losses (VCEsat).</li>
-                    <li><strong>Turn-Off (Vge_off):</strong> A negative voltage (e.g., -8V to -15V) is strongly recommended. This provides a solid turn-off state, preventing accidental turn-on due to Miller capacitance (dV/dt induced turn-on).</li>
-                </ul>
+                    <h2>1. Gate Voltage (Vge)</h2>
+                    <p>The gate voltage must be carefully controlled:</p>
+                    <ul>
+                        <li><strong>Turn-On (Vge_on):</strong> Typically +15V. This ensures the IGBT is fully enhanced to minimize conduction losses (VCEsat).</li>
+                        <li><strong>Turn-Off (Vge_off):</strong> A negative voltage (e.g., -8V to -15V) is strongly recommended. This provides a solid turn-off state, preventing accidental turn-on due to Miller capacitance (dV/dt induced turn-on).</li>
+                    </ul>
 
-                <h2>2. Gate Drive Current</h2>
-                <p>The driver must be able to source and sink enough peak current to charge and discharge the IGBT's input capacitance (Cies) quickly. The required current can be estimated by: <strong>I_peak ≈ ΔVge / (Rg_total * t_switch)</strong>. A driver capable of 5-15A peak current is common for modules like the <a href="../products/igbt-modules/t-igbt-h3300.html">T-IGBT-H3300</a>.</p>
+                    <h2>2. Gate Drive Current</h2>
+                    <p>The driver must be able to source and sink enough peak current to charge and discharge the IGBT's input capacitance (Cies) quickly. The required current can be estimated by: <strong>I_peak ≈ ΔVge / (Rg_total * t_switch)</strong>. A driver capable of 5-15A peak current is common for modules like the <a href="../products/igbt-modules/t-igbt-h3300.html">T-IGBT-H3300</a>.</p>
 
-                <h2>3. Gate Resistor (Rg)</h2>
-                <p>The external gate resistor is used to control the switching speed (di/dt and dV/dt):</p>
-                <ul>
-                    <li><strong>Smaller Rg:</strong> Faster switching, lower switching losses, but higher voltage overshoot and EMI.</li>
-                    <li><strong>Larger Rg:</strong> Slower switching, higher switching losses, but less overshoot and "gentler" on the device.</li>
-                </ul>
-                <p>A separate Rg for turn-on and turn-off is often used for optimal control.</p>
-                
-                <blockquote><strong>FAE Tip:</strong> Always place the gate driver circuit as physically close to the IGBT's gate and emitter terminals as possible. This minimizes the inductance of the gate drive loop, which is critical for preventing oscillations and ensuring clean switching.</blockquote>
+                    <h2>3. Gate Resistor (Rg)</h2>
+                    <p>The external gate resistor is used to control the switching speed (di/dt and dV/dt):</p>
+                    <ul>
+                        <li><strong>Smaller Rg:</strong> Faster switching, lower switching losses, but higher voltage overshoot and EMI.</li>
+                        <li><strong>Larger Rg:</strong> Slower switching, higher switching losses, but less overshoot and "gentler" on the device.</li>
+                    </ul>
+                    <p>A separate Rg for turn-on and turn-off is often used for optimal control.</p>
+                    
+                    <blockquote><strong>FAE Tip:</strong> Always place the gate driver circuit as physically close to the IGBT's gate and emitter terminals as possible. This minimizes the inductance of the gate drive loop, which is critical for preventing oscillations and ensuring clean switching.</blockquote>
 
-                <h2>4. Isolation</h2>
-                <p>Galvanic isolation is required between the control circuit and the high-voltage power stage:</p>
-                <ul>
-                    <li><strong>Isolation Methods:</strong> Transformer, optocoupler, or magnetic isolation</li>
-                    <li><strong>Isolation Voltage:</strong> Must exceed system voltage with safety margin</li>
-                    <li><strong>Common-Mode Transient Immunity (CMTI):</strong> Critical for high dv/dt applications to prevent false triggering</li>
-                </ul>
+                    <h2>4. Isolation</h2>
+                    <p>Galvanic isolation is required between the control circuit and the high-voltage power stage:</p>
+                    <ul>
+                        <li><strong>Isolation Methods:</strong> Transformer, optocoupler, or magnetic isolation</li>
+                        <li><strong>Isolation Voltage:</strong> Must exceed system voltage with safety margin</li>
+                        <li><strong>Common-Mode Transient Immunity (CMTI):</strong> Critical for high dv/dt applications to prevent false triggering</li>
+                    </ul>
 
-                <h2>5. Protection Circuits</h2>
-                <p>Implement protection circuits to ensure reliable operation:</p>
-                <ul>
-                    <li><strong>Miller Clamp:</strong> Prevents false turn-on during switching transients</li>
-                    <li><strong>Active Clamp:</strong> Limits voltage spikes during turn-off</li>
-                    <li><strong>Desaturation Detection:</strong> Detects short circuits and initiates protection</li>
-                    <li><strong>Soft Shutdown:</strong> Gradually reduces gate voltage during fault conditions</li>
-                </ul>
+                    <h2>5. Protection Circuits</h2>
+                    <p>Implement protection circuits to ensure reliable operation:</p>
+                    <ul>
+                        <li><strong>Miller Clamp:</strong> Prevents false turn-on during switching transients</li>
+                        <li><strong>Active Clamp:</strong> Limits voltage spikes during turn-off</li>
+                        <li><strong>Desaturation Detection:</strong> Detects short circuits and initiates protection</li>
+                        <li><strong>Soft Shutdown:</strong> Gradually reduces gate voltage during fault conditions</li>
+                    </ul>
 
-                <h2>6. Layout Considerations</h2>
-                <p>Proper layout is essential for optimal performance:</p>
-                <ul>
-                    <li><strong>Minimize Gate Loop Inductance:</strong> Keep gate and emitter connections short and wide</li>
-                    <li><strong>Separate Power and Signal Grounds:</strong> Prevent noise coupling</li>
-                    <li><strong>Shielded Cables:</strong> Use twisted pair or coaxial cables for gate signals</li>
-                    <li><strong>Decoupling Capacitors:</strong> Place ceramic capacitors close to driver power pins</li>
-                </ul>
+                    <h2>6. Layout Considerations</h2>
+                    <p>Proper layout is essential for optimal performance:</p>
+                    <ul>
+                        <li><strong>Minimize Gate Loop Inductance:</strong> Keep gate and emitter connections short and wide</li>
+                        <li><strong>Separate Power and Signal Grounds:</strong> Prevent noise coupling</li>
+                        <li><strong>Shielded Cables:</strong> Use twisted pair or coaxial cables for gate signals</li>
+                        <li><strong>Decoupling Capacitors:</strong> Place ceramic capacitors close to driver power pins</li>
+                    </ul>
 
-                <h2>7. Design Tools and Resources</h2>
-                <p>Take advantage of available design resources:</p>
-                <ul>
-                    <li><strong>Gate Driver Selection Tools:</strong> Many manufacturers provide online tools to select appropriate drivers</li>
-                    <li><strong>Simulation Models:</strong> SPICE models for gate driver ICs and IGBT modules</li>
-                    <li><strong>Reference Designs:</strong> Proven layouts and schematics from manufacturers</li>
-                    <li><strong>Application Notes:</strong> Detailed guidance on specific design challenges</li>
-                </ul>
+                    <h2>7. Design Tools and Resources</h2>
+                    <p>Take advantage of available design resources:</p>
+                    <ul>
+                        <li><strong>Gate Driver Selection Tools:</strong> Many manufacturers provide online tools to select appropriate drivers</li>
+                        <li><strong>Simulation Models:</strong> SPICE models for gate driver ICs and IGBT modules</li>
+                        <li><strong>Reference Designs:</strong> Proven layouts and schematics from manufacturers</li>
+                        <li><strong>Application Notes:</strong> Detailed guidance on specific design challenges</li>
+                    </ul>
 
-                <h2>Conclusion</h2>
-                <p>Designing an effective gate driver for IGBT modules requires careful consideration of voltage levels, drive current capability, switching speed control, isolation requirements, and protection features. By following these guidelines and leveraging available design resources, you can create a robust gate driver circuit that ensures optimal performance and reliability of your power electronics system.</p>
+                    <h2>Conclusion</h2>
+                    <p>Designing an effective gate driver for IGBT modules requires careful consideration of voltage levels, drive current capability, switching speed control, isolation requirements, and protection features. By following these guidelines and leveraging available design resources, you can create a robust gate driver circuit that ensures optimal performance and reliability of your power electronics system.</p>
 
-                <div class="article-footer">
-                    <h3>About the Authors</h3>
-                    <p>The LiTong FAE Team consists of experienced power electronics engineers who provide design assistance and technical support for customers implementing IGBT solutions. We have extensive experience in gate driver design for applications ranging from industrial motor drives to grid-scale power converters.</p>
+                    <div class="article-footer">
+                        <h3>About the Authors</h3>
+                        <p>The LiTong FAE Team consists of experienced power electronics engineers who provide design assistance and technical support for customers implementing IGBT solutions. We have extensive experience in gate driver design for applications ranging from industrial motor drives to grid-scale power converters.</p>
+                    </div>
                 </div>
             </div>
         </section>
