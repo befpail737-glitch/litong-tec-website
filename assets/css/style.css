@@ -1,12 +1,13 @@
-/* Simplified CSS for Technical Support Articles */
+/* Minimal CSS for Technical Support Articles - Focused on Fixing Display Issues */
 
-/* Reset and Base Styles */
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Base Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
@@ -31,6 +32,7 @@ h1, h2, h3, h4 {
 h1 { 
     font-size: 2.5rem; 
     margin-top: 1rem;
+    text-align: center;
 }
 
 h2 { 
@@ -149,11 +151,13 @@ a:hover {
     color: #6c757d;
 }
 
-/* Article Content */
+/* Article Content - FIXED STYLING */
 .article-content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 2rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .article-meta {
@@ -162,6 +166,27 @@ a:hover {
     font-size: 0.9rem;
     margin-bottom: 2rem;
     font-style: italic;
+}
+
+.article-content h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: #0033a0;
+}
+
+.article-content h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    color: #0033a0;
+}
+
+.article-content h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    color: #0033a0;
 }
 
 .article-content ul,
@@ -197,6 +222,7 @@ a:hover {
     text-align: left;
     border: none;
     padding: 0;
+    color: #0033a0;
 }
 
 /* Sections */
@@ -211,6 +237,7 @@ a:hover {
 .section-title {
     text-align: center;
     margin-bottom: 2rem;
+    color: #0033a0;
 }
 
 /* Grid System */
@@ -239,6 +266,7 @@ a:hover {
 
 .card h3 {
     margin-bottom: 1rem;
+    color: #0033a0;
 }
 
 .card h3 a {
@@ -248,6 +276,70 @@ a:hover {
 
 .card h3 a:hover {
     text-decoration: underline;
+}
+
+/* Support Cards - ADDED MISSING STYLES */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.support-card {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.support-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.support-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.support-icon {
+    width: 40px;
+    height: 40px;
+    background: #0033a0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.support-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.support-card h3 a {
+    color: #0033a0;
+    text-decoration: none;
+}
+
+.support-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.support-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.support-meta {
+    color: #666;
+    font-size: 0.85rem;
 }
 
 /* Footer */
@@ -291,7 +383,7 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Responsive Fixes */
 @media (max-width: 768px) {
     .grid-2, .grid-3, .grid-4 {
         grid-template-columns: 1fr;
@@ -325,5 +417,9 @@ a:hover {
     
     .article-content {
         padding: 1rem 0;
+    }
+    
+    .support-grid {
+        grid-template-columns: 1fr;
     }
 }
