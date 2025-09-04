@@ -3,84 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>How to Select SiC Modules for an 800V EV Main Inverter | LiTong</title>
-    <meta name="description" content="A technical guide from LiTong's FAEs on selecting the right CRRC Times Electric SiC module for your 800V EV inverter project. Learn about key parameters like Rds(on), thermal resistance, and packaging.">
-    
+    <title>Frequently Asked Questions | LiTong Distributor</title>
+    <meta name="description" content="Find answers to common questions about ordering from LiTong, product authenticity, sample requests, and technical support for CRRC Times Electric power semiconductors.">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Schema.org for Article -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "How to Select the Right SiC Module for Your 800V EV Main Inverter",
-      "author": {
-        "@type": "Person",
-        "name": "John Doe, FAE" 
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "LiTong",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.litong-tec.com/logos/litong-logo.svg"
+    <style>
+        /* Styles specific to FAQ page */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-      },
-      "datePublished": "2025-07-20"
-    }
-    </script>
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            position: relative;
+        }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header (Copy from index.html) -->
+    <!-- Header -->
     <header class="header">
         <div class="container navbar">
-             <a href="" class="logo"><img src="logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;"></a>
-             <nav><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="products/">Products</a></li><li><a href="solutions/">Solutions</a></li><li><a href="support/">Technical Support</a></li><li><a href="news/">News</a></li><li><a href="about.html">About Us</a></li></ul></nav>
-             <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            <a href="index.html" class="logo">
+                <img src="logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="solutions/index.html">Solutions</a></li>
+                    <li><a href="support/index.html">Technical Support</a></li>
+                    <li><a href="news/index.html">News</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
         </div>
     </header>
-
 
     <main>
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
             <div class="container">
                 <ol>
-                    <li><a href="">Home</a></li>
-                    <!-- We will create /support/index.html later -->
-                    <li><a href="support/">Technical Support</a></li>
-                    <li class="active">How to Select SiC Modules...</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">FAQ</li>
                 </ol>
             </div>
         </div>
+        
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find quick answers to your questions. If you can't find what you're looking for, please don't hesitate to contact us.</p>
+            </div>
+        </div>
 
-        <section class="content-section">
-            <div class="content-body">
-                <h1>How to Select the Right SiC Module for Your 800V EV Main Inverter</h1>
-                <p class="article-meta">By John Doe, FAE | Published on: July 20, 2025 | Category: Selection Guides</p>
-
-                <p>The transition to 800V architectures in electric vehicles is accelerating, and Silicon Carbide (SiC) is the enabling technology. However, selecting the optimal SiC power module is more complex than simply matching voltage and current ratings. This guide covers the critical parameters you must consider to maximize performance and ensure reliability.</p>
-
-                <h2>1. On-Resistance (Rds(on)) vs. Chip Area</h2>
-                <p>Lower Rds(on) means lower conduction losses, which is critical for efficiency. However, a lower Rds(on) usually implies a larger SiC chip area, which increases cost and parasitic capacitance. You need to strike a balance based on your target efficiency and cost. For a typical 200kW inverter, a module like the <a href="products/sic-devices/t-sic-m1200.html">T-SiC-M1200</a> with an Rds(on) in the range of 2-4 mΩ is a good starting point.</p>
-
-                <h2>2. Thermal Resistance (Rth(j-c))</h2>
-                <p>This parameter dictates how efficiently heat can be extracted from the SiC junction to the module's case. A lower Rth(j-c) value is always better, as it means the chip will run cooler for a given power dissipation. CRRC's advanced packaging technologies, such as silver sintering for die attach, are key to achieving industry-leading low thermal resistance.</p>
-
-                <h2>3. Package Stray Inductance</h2>
-                <p>Due to the extremely fast switching speeds of SiC (high di/dt), package stray inductance (Ls) is a critical parameter. High inductance can cause significant voltage overshoot and ringing, potentially damaging the device or causing EMC issues. Look for modules with a low-inductance design, often featuring multiple, symmetric power terminals.</p>
-
-                <h2>4. Short-Circuit Withstand Time (SCWT)</h2>
-                <p>While SiC MOSFETs are known for having a shorter SCWT than Si-IGBTs, automotive applications demand robust protection. Ensure the module you select is rated for a sufficient withstand time (typically 2-3 µs) and that your gate driver has a fast-acting DESAT protection circuit to detect and manage short-circuit events safely.</p>
+        <section class="section">
+            <div class="container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Are all your products original and authentic?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. As an officially authorized core distributor for CRRC Times Electric, we guarantee that 100% of our products are original, brand-new, and fully traceable back to the factory. We can provide certificates of conformity and other documentation upon request. All our products come with our authenticity guarantee.</p>
+                    </div>
+                </div>
                 
-                <h3>Conclusion</h3>
-                <blockquote>"Selecting the right SiC module is a multi-faceted decision. It's essential to analyze your system's complete operating profile, not just peak power. By carefully considering Rds(on), thermal performance, and package parasitics, you can fully leverage the benefits of SiC. Our team is ready to help you perform these analyses and select the perfect CRRC Times Electric module for your project."</blockquote>
+                <div class="faq-item">
+                    <h3 class="faq-question">How can I request a sample?</h3>
+                    <div class="faq-answer">
+                        <p>For qualified projects, we are happy to provide engineering samples. The best way is to navigate to the specific product page you are interested in and click the "Request a Sample" button. Alternatively, you can use our main <a href="contact.html">Contact Us</a> page and specify the part number and project details. Our team will review your request and respond within 24 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you provide technical support?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutely. Technical support is a core part of our value proposition. Our team of experienced Field Application Engineers (FAEs) can help with component selection, design review, troubleshooting, and understanding datasheets. Please contact us with your technical query. We offer support in multiple areas including:</p>
+                        <ul>
+                            <li>Product selection and application guidance</li>
+                            <li>Design review and optimization</li>
+                            <li>Simulation and modeling assistance</li>
+                            <li>Failure analysis and troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What is your typical lead time?</h3>
+                    <div class="faq-answer">
+                        <p>For items we have in stock, we can typically ship within 1-2 business days. For factory orders, the lead time varies depending on the specific product and factory capacity. When you request a quote, we will provide you with an accurate and up-to-date lead time. Our inventory team regularly updates stock information to ensure accuracy.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer volume pricing or discounts?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, we offer competitive volume pricing for qualified customers. The specific discount structure depends on the product, quantity, and delivery schedule. Please contact our sales team with your volume requirements, and we will provide a customized quote. We also offer special pricing for long-term framework agreements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Can you help with custom packaging or labeling?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, we offer value-added services including custom packaging, labeling, and kitting. This is particularly useful for OEM customers who need specific labeling or packaging configurations. Please discuss your requirements with our customer service team when placing your order.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What payment methods do you accept?</h3>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods including bank transfer, credit card, and letter of credit for qualified customers. Payment terms depend on your customer status and order value. New customers typically start with prepayment or letter of credit, while established customers may qualify for net payment terms.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you ship internationally?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, we ship worldwide. We have extensive experience with international shipping and can handle all necessary export documentation. Shipping times vary by destination, but we typically use express courier services for urgent deliveries. For large shipments, we can arrange air or sea freight as needed.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">What is your return policy?</h3>
+                    <div class="faq-answer">
+                        <p>We accept returns for unused, unopened products within 30 days of delivery. The product must be in its original packaging and in resalable condition. A restocking fee may apply. Please contact our customer service team to initiate a return. We cannot accept returns for custom or special order items.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer (Copy from index.html) -->
-    <footer class="footer">...</footer>
-    <script src="assets/js/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h4>About LiTong</h4>
+                    <p>LiTong is a leading, officially authorized core distributor for CRRC Times Electric (tec.crrczic) Power Semiconductors.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products/index.html">Products</a></li>
+                        <li><a href="solutions/index.html">Solutions</a></li>
+                        <li><a href="support/index.html">Technical Support</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Product Lines</h4>
+                    <ul>
+                        <li><a href="products/igbt-modules/index.html">IGBT Modules</a></li>
+                        <li><a href="products/sic-devices/index.html">SiC Devices</a></li>
+                        <li>FRD Modules</li>
+                        <li>Thyristors / IGCTs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>123 Tech Park Avenue<br>Shenzhen, Guangdong, China<br>Email: sales@elec-distributor.com<br>Phone: +86-755-8888-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LiTong Electronics. All Rights Reserved. | CRRC Times Electric (tec.crrczic) Core Power Semiconductor Distributor</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for FAQ accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+
+                    if (isActive) {
+                        question.classList.remove('active');
+                        question.style.setProperty('--after-content', "'+'");
+                        answer.style.maxHeight = null;
+                    } else {
+                        question.classList.add('active');
+                        question.style.setProperty('--after-content', "'-'");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
