@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+<!-- Background -->
+<rect width="400" height="300" fill="#f8f9fa"/>
+
+<!-- Catenary -->
+<line x1="10" y1="40" x2="390" y2="40" stroke="#333" stroke-width="4"/>
+<text x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">1500V DC Catenary</text>
+
+<!-- Pantograph -->
+<line x1="200" y1="40" x2="200" y2="70" stroke="#333" stroke-width="3"/>
+<rect x="190" y="60" width="20" height="10" fill="#333"/>
+
+<!-- Train Body -->
+<rect x="50" y="180" width="300" height="60" rx="10" fill="#0033a0" stroke="#002269" stroke-width="2"/>
+<text x="200" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Electric Multiple Unit (EMU)</text>
+<text x="200" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">High-Speed Rail Train</text>
+
+<!-- Wheels -->
+<circle cx="80" cy="260" r="15" fill="#333"/>
+<circle cx="120" cy="260" r="15" fill="#333"/>
+<circle cx="280" cy="260" r="15" fill="#333"/>
+<circle cx="320" cy="260" r="15" fill="#333"/>
+
+<!-- Traction Inverter -->
+<rect x="130" y="90" width="100" height="70" rx="6" fill="#dc3545" stroke="#c82333" stroke-width="2"/>
+<text x="180" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Traction Inverter</text>
+<text x="180" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">T-IGBT-H3300</text>
+<text x="180" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">3300V / 1200A</text>
+<text x="180" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Field Proven</text>
+
+<!-- Motor -->
+<circle cx="300" cy="125" r="25" fill="#28a745" stroke="#1e7e34" stroke-width="2"/>
+<text x="300" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">Traction</text>
+<text x="300" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Motor</text>
+
+<!-- Power Connection -->
+<line x1="200" y1="70" x2="180" y2="90" stroke="#333" stroke-width="3"/>
+
+<!-- AC Connection to Motor -->
+<line x1="230" y1="115" x2="275" y2="115" stroke="#ff6b35" stroke-width="3"/>
+<line x1="230" y1="125" x2="275" y2="125" stroke="#ff6b35" stroke-width="3"/>
+<line x1="230" y1="135" x2="275" y2="135" stroke="#ff6b35" stroke-width="3"/>
+
+<!-- Motor to Wheels -->
+<line x1="300" y1="150" x2="300" y2="180" stroke="#333" stroke-width="4"/>
+<text x="310" y="165" font-family="Arial, sans-serif" font-size="8" fill="#666">Gearbox</text>
+
+<!-- Auxiliary Systems -->
+<rect x="250" y="90" width="60" height="30" rx="4" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+<text x="280" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">Auxiliary</text>
+<text x="280" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">HVAC, Lights</text>
+
+<!-- Control Unit -->
+<rect x="60" y="90" width="60" height="30" rx="4" fill="#17a2b8" stroke="#138496" stroke-width="1"/>
+<text x="90" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">Control</text>
+<text x="90" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">TCMS</text>
+
+<!-- Control Connection -->
+<line x1="120" y1="105" x2="130" y2="105" stroke="#17a2b8" stroke-width="2" stroke-dasharray="3,3"/>
+
+<!-- Braking Resistor -->
+<rect x="340" y="90" width="40" height="30" rx="4" fill="#ffc107" stroke="#e0a800" stroke-width="1"/>
+<text x="360" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333" font-weight="bold">Brake</text>
+<text x="360" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#333">Resistor</text>
+
+<!-- Speed Indicator -->
+<text x="380" y="200" font-family="Arial, sans-serif" font-size="16" fill="#0033a0" font-weight="bold">350</text>
+<text x="380" y="215" font-family="Arial, sans-serif" font-size="10" fill="#666">km/h</text>
+
+<!-- Performance Features -->
+<text x="20" y="280" font-family="Arial, sans-serif" font-size="11" fill="#0033a0" font-weight="bold">Key Features:</text>
+<text x="20" y="295" font-family="Arial, sans-serif" font-size="9" fill="#333">• Extreme Reliability • Power Cycling >1M • Field Proven Performance</text>
+
+<!-- Title -->
+<text x="200" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0033a0" font-weight="bold">Rail Transit Traction Solution</text>
+</svg>

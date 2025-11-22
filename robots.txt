@@ -1,0 +1,7 @@
+# robots.txt for crrc.elec-distributor.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://crrc.elec-distributor.com/sitemap.xml

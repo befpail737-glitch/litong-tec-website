@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" fill="none">
+<rect x="5" y="8" width="24" height="24" rx="4" fill="#0033a0"/>
+<text x="35" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0033a0">LiTong</text>
+<text x="35" y="32" font-family="Arial, sans-serif" font-size="8" fill="#666">Power Semiconductors</text>
+<circle cx="17" cy="20" r="6" fill="white"/>
+<path d="M14 20l2 2 4-4" stroke="#0033a0" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base & FAQ | LiTong Technical Support</title>
+    <meta name="description" content="Searchable knowledge base with frequently asked questions, troubleshooting guides, and technical tips from our engineering team for CRRC Times Electric power semiconductors.">
+    <link rel="canonical" href="https://crrc.elec-distributor.com/support/knowledge-base.html">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="../index.html" class="logo">
+                <img src="../logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/index.html">Products</a></li>
+                    <li><a href="../solutions/index.html">Solutions</a></li>
+                    <li><a href="index.html" class="active">Technical Support</a></li>
+                    <li><a href="../news/index.html">News</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Technical Support</a></li>
+                    <li class="active">Knowledge Base & FAQ</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Knowledge Base & FAQ</h1>
+                <p>Searchable knowledge base with frequently asked questions, troubleshooting guides, and technical tips from our engineering team. Find quick answers to common design challenges.</p>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <section class="section">
+            <div class="container">
+                <div class="card" style="text-align: center; padding: 2rem;">
+                    <h3>Search Knowledge Base</h3>
+                    <p>Find answers to technical questions, troubleshooting guides, and design tips.</p>
+                    <div style="max-width: 600px; margin: 2rem auto;">
+                        <input type="text" placeholder="Search for IGBT, SiC, thermal management, gate driver..." style="width: 70%; padding: 0.75rem; border: 2px solid #dee2e6; border-radius: 6px 0 0 6px; font-size: 1rem;">
+                        <button style="width: 30%; padding: 0.75rem; background: #0033a0; color: white; border: none; border-radius: 0 6px 6px 0; font-size: 1rem; cursor: pointer;">Search</button>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #666;">200+ articles • Regular updates • Expert insights</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Topics -->
+        <section class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">Popular Topics</h2>
+                <div class="grid grid-4">
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🔌</div>
+                        <h4>IGBT Design</h4>
+                        <p>Gate driver design, thermal management, parallel operation</p>
+                        <a href="#igbt-faq" class="btn btn-secondary">View Articles</a>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">⚡</div>
+                        <h4>SiC Technology</h4>
+                        <p>Selection guide, high-frequency design, EMI mitigation</p>
+                        <a href="#sic-faq" class="btn btn-secondary">View Articles</a>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🌡️</div>
+                        <h4>Thermal Design</h4>
+                        <p>Cooling solutions, junction temperature, reliability</p>
+                        <a href="#thermal-faq" class="btn btn-secondary">View Articles</a>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🛠️</div>
+                        <h4>Troubleshooting</h4>
+                        <p>Common issues, failure analysis, debugging tips</p>
+                        <a href="#troubleshooting-faq" class="btn btn-secondary">View Articles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IGBT FAQ Section -->
+        <section id="igbt-faq" class="section">
+            <div class="container">
+                <h2 class="section-title">IGBT Design FAQ</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Q: What gate voltage should I use for IGBT modules?</h4>
+                        <p><strong>A:</strong> For optimal performance, use +15V for turn-on and -8V to -15V for turn-off. The positive gate voltage ensures full enhancement and low VCEsat, while negative voltage prevents false turn-on from Miller capacitance effects during high dV/dt switching.</p>
+                        <div class="support-meta">Category: Gate Driver Design • Updated: January 2025</div>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>Q: How do I calculate gate resistor values for switching speed control?</h4>
+                        <p><strong>A:</strong> Gate resistor selection balances switching speed and EMI. Smaller values (1-10Ω) provide faster switching but higher overshoot. Larger values (20-100Ω) reduce EMI but increase switching losses. Use separate turn-on and turn-off resistors for optimal control.</p>
+                        <div class="support-meta">Category: Gate Driver Design • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: What's the maximum junction temperature for IGBT modules?</h4>
+                        <p><strong>A:</strong> Most CRRC Times Electric IGBT modules are rated for 150°C maximum junction temperature. However, for long-term reliability, operate below 125°C. Higher temperatures reduce lifetime exponentially according to Arrhenius law.</p>
+                        <div class="support-meta">Category: Thermal Management • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: Can I parallel IGBT modules for higher current capability?</h4>
+                        <p><strong>A:</strong> Yes, but careful design is required. Use modules with matched characteristics, separate gate drivers for each module, and balance the current with small source inductances or current transformers. See our parallel operation application note for detailed guidelines.</p>
+                        <div class="support-meta">Category: System Design • Updated: December 2024</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SiC FAQ Section -->
+        <section id="sic-faq" class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">SiC Technology FAQ</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Q: What are the advantages of SiC over Si IGBT?</h4>
+                        <p><strong>A:</strong> SiC modules offer: 1) Higher switching frequency (up to 500kHz), 2) Lower switching losses, 3) Higher operating temperature (175°C), 4) Lower RDS(on), and 5) Better thermal conductivity. This enables smaller, more efficient power electronics systems.</p>
+                        <div class="support-meta">Category: Technology Comparison • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: Do I need special gate drivers for SiC MOSFETs?</h4>
+                        <p><strong>A:</strong> While SiC can use standard gate drivers, optimized drivers provide better performance. Key requirements: fast rise/fall times (<50ns), strong drive current (>5A), and good common-mode transient immunity (CMTI >50kV/μs) for high dV/dt switching.</p>
+                        <div class="support-meta">Category: Gate Driver Design • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: How do I handle EMI with fast-switching SiC modules?</h4>
+                        <p><strong>A:</strong> EMI mitigation strategies: 1) Minimize loop inductances with tight PCB layout, 2) Use low-ESL DC-link capacitors, 3) Implement proper grounding and shielding, 4) Add common-mode and differential-mode filters, and 5) Consider soft-switching techniques.</p>
+                        <div class="support-meta">Category: EMI/EMC • Updated: December 2024</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: What switching frequency should I use with SiC modules?</h4>
+                        <p><strong>A:</strong> SiC excels at high frequencies. For automotive (EV): 20-50kHz for efficiency and noise. For server PSU: 100-300kHz for density. For wireless charging: 100-500kHz for resonant operation. Balance efficiency, EMI, and magnetic component size.</p>
+                        <div class="support-meta">Category: System Design • Updated: January 2025</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thermal Management FAQ -->
+        <section id="thermal-faq" class="section">
+            <div class="container">
+                <h2 class="section-title">Thermal Management FAQ</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Q: How do I calculate junction temperature?</h4>
+                        <p><strong>A:</strong> Use the formula: Tj = Ta + Ploss × Rth(j-a), where Ta is ambient temperature, Ploss is total power dissipation, and Rth(j-a) is total thermal resistance from junction to ambient. Include thermal interface material and heatsink resistance in calculations.</p>
+                        <div class="support-meta">Category: Thermal Analysis • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: What thermal interface material should I use?</h4>
+                        <p><strong>A:</strong> For standard applications, use thermal pads (1-3W/mK). For high-performance: thermal paste (3-8W/mK) or phase-change materials. For extreme applications: consider direct bonded copper (DBC) or thermal interface materials with >10W/mK thermal conductivity.</p>
+                        <div class="support-meta">Category: Thermal Interface • Updated: December 2024</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: How do I size a heatsink for my power module?</h4>
+                        <p><strong>A:</strong> Calculate required thermal resistance: Rth(heatsink) = (Tj-max - Ta) / Ploss - Rth(j-c) - Rth(interface). Then select heatsink with thermal resistance below this value. Consider airflow, mounting orientation, and safety margins.</p>
+                        <div class="support-meta">Category: Cooling Design • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: When should I consider liquid cooling?</h4>
+                        <p><strong>A:</strong> Consider liquid cooling when: 1) Power density exceeds ~1kW/L, 2) Ambient temperature >50°C, 3) Size constraints limit heatsink options, or 4) Precise temperature control required. Liquid cooling can achieve 10x better heat removal than air cooling.</p>
+                        <div class="support-meta">Category: Cooling Solutions • Updated: November 2024</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting FAQ -->
+        <section id="troubleshooting-faq" class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">Troubleshooting FAQ</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Q: Why is my IGBT module showing high VCEsat?</h4>
+                        <p><strong>A:</strong> Common causes: 1) Insufficient gate drive voltage (<15V), 2) High gate resistance limiting current, 3) Poor thermal contact causing overheating, 4) Module degradation from overcurrent/overtemperature, or 5) Incorrect module selection for application.</p>
+                        <div class="support-meta">Category: Troubleshooting • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: How do I diagnose switching oscillations?</h4>
+                        <p><strong>A:</strong> Oscillations indicate parasitic inductance/capacitance. Check: 1) Gate drive loop inductance, 2) DC-link layout and decoupling, 3) Gate resistor values, 4) PCB layout and grounding, and 5) Snubber circuits. Use scope with short ground leads for accurate measurement.</p>
+                        <div class="support-meta">Category: Troubleshooting • Updated: January 2025</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: What causes premature module failure?</h4>
+                        <p><strong>A:</strong> Top failure causes: 1) Thermal cycling beyond ratings, 2) Overcurrent during short circuits, 3) Gate oxide stress from overvoltage, 4) Poor mounting creating mechanical stress, and 5) Contamination from inadequate handling. Follow proper installation procedures.</p>
+                        <div class="support-meta">Category: Reliability • Updated: December 2024</div>
+                    </div>
+
+                    <div class="card">
+                        <h4>Q: How do I test if a power module is functioning correctly?</h4>
+                        <p><strong>A:</strong> Basic tests: 1) Gate-emitter leakage current (<100nA), 2) VCEsat at rated current and 25°C, 3) Gate threshold voltage (typically 5-7V), 4) Collector-emitter leakage, and 5) Thermal resistance measurement. Compare against datasheet specifications.</p>
+                        <div class="support-meta">Category: Testing • Updated: January 2025</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="section">
+            <div class="container">
+                <div class="card" style="text-align: center; padding: 3rem;">
+                    <h2>Can't Find What You're Looking For?</h2>
+                    <p style="font-size: 1.1rem; margin: 1rem 0 2rem;">Our FAE team is here to help with specific technical questions and design challenges. Get expert support for your power semiconductor applications.</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a href="../contact.html" class="btn btn-primary">Ask Our Experts</a>
+                        <a href="mailto:support@elec-distributor.com" class="btn btn-secondary">Email: support@elec-distributor.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h4>About LiTong</h4>
+                    <p>LiTong is a leading, officially authorized core distributor for CRRC Times Electric (tec.crrczic) Power Semiconductors.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../products/index.html">Products</a></li>
+                        <li><a href="../solutions/index.html">Solutions</a></li>
+                        <li><a href="index.html">Technical Support</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Knowledge Base</h4>
+                    <ul>
+                        <li><a href="#igbt-faq">IGBT Design FAQ</a></li>
+                        <li><a href="#sic-faq">SiC Technology FAQ</a></li>
+                        <li><a href="#thermal-faq">Thermal Management FAQ</a></li>
+                        <li><a href="#troubleshooting-faq">Troubleshooting FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Technical Support</h4>
+                    <p>FAE Team: support@elec-distributor.com<br>Phone: +86-123-4567-8901<br>Response: 24 Hours</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LiTong Electronics. All Rights Reserved. | CRRC Times Electric (tec.crrczic) Core Power Semiconductor Distributor</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
