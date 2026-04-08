@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LiTong Electronics | CRRC Times Electric Distributor</title>
+    <meta name="description" content="Contact LiTong Electronics for CRRC Times Electric power semiconductor solutions. Get in touch with our experts for technical support, quotes, and product information.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Force sidebar positioning for contact page */
+        .fixed-contact-sidebar {
+            position: fixed !important;
+            top: 50% !important;
+            right: 30px !important;
+            bottom: auto !important;
+            left: auto !important;
+            transform: translateY(-50%) !important;
+            z-index: 99999 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 20px !important;
+        }
+        
+        .sidebar-contact-btn {
+            width: auto !important;
+            height: 60px !important;
+            border-radius: 30px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-decoration: none !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+            transition: all 0.3s ease !important;
+            border: 3px solid rgba(255, 255, 255, 0.2) !important;
+            position: relative !important;
+            overflow: visible !important;
+            padding: 0 20px !important;
+            min-width: 180px !important;
+        }
+        
+        .sidebar-contact-btn:hover {
+            transform: scale(1.15) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25) !important;
+            text-decoration: none !important;
+        }
+        
+        .sidebar-contact-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #20bf5a 100%) !important;
+            color: white !important;
+        }
+        
+        .sidebar-contact-btn.wechat {
+            background: linear-gradient(135deg, #1AAD19 0%, #16a015 100%) !important;
+            color: white !important;
+        }
+        
+        .sidebar-contact-btn .btn-icon {
+            display: flex !important;
+            align-items: center !important;
+            margin-right: 12px !important;
+        }
+        
+        .sidebar-contact-btn .btn-icon svg {
+            width: 28px !important;
+            height: 28px !important;
+            flex-shrink: 0 !important;
+        }
+        
+        .btn-content {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            color: white !important;
+        }
+        
+        .btn-title {
+            font-weight: 600 !important;
+            font-size: 0.9rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 2px !important;
+        }
+        
+        .btn-number {
+            font-size: 0.8rem !important;
+            opacity: 0.9 !important;
+            line-height: 1.1 !important;
+        }
+        
+        /* Enhanced tooltips */
+        .btn-tooltip {
+            position: absolute !important;
+            right: 80px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            background: rgba(0, 0, 0, 0.9) !important;
+            color: white !important;
+            padding: 12px 16px !important;
+            border-radius: 8px !important;
+            white-space: nowrap !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transition: all 0.3s ease !important;
+            pointer-events: none !important;
+            font-size: 0.9rem !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+            min-width: 140px !important;
+        }
+        
+        .btn-tooltip::after {
+            content: '' !important;
+            position: absolute !important;
+            left: 100% !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            border: 8px solid transparent !important;
+            border-left-color: rgba(0, 0, 0, 0.9) !important;
+        }
+        
+        .sidebar-contact-btn:hover .btn-tooltip {
+            opacity: 1 !important;
+            visibility: visible !important;
+            right: 85px !important;
+        }
+        
+        .tooltip-title {
+            display: block !important;
+            font-weight: 600 !important;
+            margin-bottom: 4px !important;
+            font-size: 1rem !important;
+        }
+        
+        .tooltip-number {
+            display: block !important;
+            font-size: 0.85rem !important;
+            opacity: 0.9 !important;
+            color: #e0e0e0 !important;
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .fixed-contact-sidebar {
+                right: 15px !important;
+                gap: 15px !important;
+            }
+            .sidebar-contact-btn {
+                min-width: 140px !important;
+                height: 50px !important;
+                padding: 0 15px !important;
+            }
+            .sidebar-contact-btn .btn-icon {
+                margin-right: 8px !important;
+            }
+            .sidebar-contact-btn .btn-icon svg {
+                width: 24px !important;
+                height: 24px !important;
+            }
+            .btn-title {
+                font-size: 0.8rem !important;
+            }
+            .btn-number {
+                font-size: 0.7rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .sidebar-contact-btn {
+                min-width: 120px !important;
+                height: 45px !important;
+                padding: 0 12px !important;
+            }
+            .btn-title {
+                font-size: 0.75rem !important;
+            }
+            .btn-number {
+                font-size: 0.65rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="solutions/index.html">Solutions</a></li>
+                    <li><a href="support/index.html">Technical Support</a></li>
+                    <li><a href="news/index.html">News</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary active">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p class="hero-subtitle">Connect with LiTong's global network of experts for CRRC Times Electric power semiconductor solutions. We're here to support your projects worldwide.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Global Offices</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Continents</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Regional Offices -->
+        <section class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">Global Offices</h2>
+                <div class="module-grid">
+
+                    <!-- Hong Kong HQ -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇭🇰</div>
+                        <div class="module-content">
+                            <h3>Hong Kong Headquarters</h3>
+                            <p class="module-excerpt">Primary operational hub and regional headquarters for Asia-Pacific operations.</p>
+                            <div class="module-meta">Headquarters • Primary Hub</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>5/F, Green 18, 7 Science Park East Avenue<br>Hong Kong Science Park, Shatin, Hong Kong</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:hk@elec-distributor.com">hk@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Headquarters</span>
+                                <span class="feature-tag">Asia-Pacific Hub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beijing Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇨🇳</div>
+                        <div class="module-content">
+                            <h3>Beijing Office</h3>
+                            <p class="module-excerpt">Northern China operations serving the capital region and surrounding provinces.</p>
+                            <div class="module-meta">China • Northern Region</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Room 101-215, 2/F, Building 19, Yard 6<br>Hengye North 7th Street, Tongzhou District, Beijing</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:bj@elec-distributor.com">bj@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Beijing</span>
+                                <span class="feature-tag">Northern China</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shanghai Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🏙️</div>
+                        <div class="module-content">
+                            <h3>Shanghai Office</h3>
+                            <p class="module-excerpt">Eastern China hub covering the Yangtze River Delta economic zone.</p>
+                            <div class="module-meta">China • Eastern Region</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Room 705-706, Baokuang Intercontinental<br>Business Center, 100 Yutong Road, Shanghai</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:sh@elec-distributor.com">sh@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Shanghai</span>
+                                <span class="feature-tag">Yangtze Delta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shenzhen Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🏢</div>
+                        <div class="module-content">
+                            <h3>Shenzhen Office</h3>
+                            <p class="module-excerpt">Southern China operations in the Pearl River Delta manufacturing hub.</p>
+                            <div class="module-meta">China • Southern Region</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Room 306-308, Changping Business Building<br>6 Honghua Road, Futian Free Trade Zone, Shenzhen</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:sz@elec-distributor.com">sz@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Shenzhen</span>
+                                <span class="feature-tag">Pearl River Delta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- USA Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇺🇸</div>
+                        <div class="module-content">
+                            <h3>United States Office</h3>
+                            <p class="module-excerpt">North American operations serving the USA market and infrastructure projects.</p>
+                            <div class="module-meta">Americas • USA</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>1776 K St NW, Washington, D.C. 20006, USA</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:john.smith@elec-distributor.com">john.smith@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Washington DC</span>
+                                <span class="feature-tag">North America</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mexico Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇲🇽</div>
+                        <div class="module-content">
+                            <h3>Mexico Office</h3>
+                            <p class="module-excerpt">Mexican operations covering Latin American markets and cross-border trade.</p>
+                            <div class="module-meta">Americas • Mexico</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Torre Mayor, Av. P. de la Reforma 505<br>Cuauhtémoc, 06500 Ciudad de México, CDMX, Mexico</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:sofia.hernandez@elec-distributor.com">sofia.hernandez@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Mexico City</span>
+                                <span class="feature-tag">Latin America</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Germany Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇩🇪</div>
+                        <div class="module-content">
+                            <h3>Germany Office</h3>
+                            <p class="module-excerpt">European hub serving German industrial market and EU operations.</p>
+                            <div class="module-meta">Europe • Germany</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Potsdamer Platz 1, 10785 Berlin, Germany</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:michael.muller@elec-distributor.com">michael.muller@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Berlin</span>
+                                <span class="feature-tag">EU Hub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UK Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇬🇧</div>
+                        <div class="module-content">
+                            <h3>United Kingdom Office</h3>
+                            <p class="module-excerpt">UK operations serving British and Commonwealth markets.</p>
+                            <div class="module-meta">Europe • United Kingdom</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>20 Fenchurch St, London EC3M 3BY<br>United Kingdom</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:emily.jones@elec-distributor.com">emily.jones@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">London</span>
+                                <span class="feature-tag">Commonwealth</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Italy Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇮🇹</div>
+                        <div class="module-content">
+                            <h3>Italy Office</h3>
+                            <p class="module-excerpt">Italian operations serving Southern European markets.</p>
+                            <div class="module-meta">Europe • Italy</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Piazzale dell'Industria, 40<br>00144 Roma RM, Italy</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:giulia.rossi@elec-distributor.com">giulia.rossi@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Rome</span>
+                                <span class="feature-tag">Southern Europe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poland Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇵🇱</div>
+                        <div class="module-content">
+                            <h3>Poland Office</h3>
+                            <p class="module-excerpt">Eastern European operations serving Central and Eastern European markets.</p>
+                            <div class="module-meta">Europe • Poland</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Warsaw Financial Center<br>Emilii Plater 53, 00-113 Warszawa, Poland</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:anna.kowalska@elec-distributor.com">anna.kowalska@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Warsaw</span>
+                                <span class="feature-tag">Eastern Europe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slovakia Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇸🇰</div>
+                        <div class="module-content">
+                            <h3>Slovakia Office</h3>
+                            <p class="module-excerpt">Central European operations with focus on automotive and industrial sectors.</p>
+                            <div class="module-meta">Europe • Slovakia</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Twin City Tower<br>Mlynské nivy 10, 821 09 Bratislava, Slovakia</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:peter.horvath@elec-distributor.com">peter.horvath@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Bratislava</span>
+                                <span class="feature-tag">Automotive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Russia Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇷🇺</div>
+                        <div class="module-content">
+                            <h3>Russia Office</h3>
+                            <p class="module-excerpt">Russian operations serving CIS markets and large industrial projects.</p>
+                            <div class="module-meta">Europe • Russia</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Federation Tower<br>Presnenskaya nab., 12, Moscow, Russia, 123112</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:ivan.petrov@elec-distributor.com">ivan.petrov@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Moscow</span>
+                                <span class="feature-tag">CIS Markets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Turkey Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇹🇷</div>
+                        <div class="module-content">
+                            <h3>Turkey Office</h3>
+                            <p class="module-excerpt">Turkish operations bridging European and Middle Eastern markets.</p>
+                            <div class="module-meta">Europe • Turkey</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Söğütözü, Söğütözü Cd. No:2<br>Armada Tower, 06510 Çankaya/Ankara, Turkey</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:elif.yilmaz@elec-distributor.com">elif.yilmaz@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Ankara</span>
+                                <span class="feature-tag">Middle East Bridge</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Japan Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇯🇵</div>
+                        <div class="module-content">
+                            <h3>Japan Office</h3>
+                            <p class="module-excerpt">Japanese operations serving advanced technology and manufacturing sectors.</p>
+                            <div class="module-meta">Asia-Pacific • Japan</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Marunouchi Park Building<br>2-6-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005, Japan</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:ken.tanaka@elec-distributor.com">ken.tanaka@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Tokyo</span>
+                                <span class="feature-tag">Advanced Tech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- South Korea Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇰🇷</div>
+                        <div class="module-content">
+                            <h3>South Korea Office</h3>
+                            <p class="module-excerpt">Korean operations supporting advanced semiconductor and automotive industries.</p>
+                            <div class="module-meta">Asia-Pacific • South Korea</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Gangnam Finance Center<br>152 Teheran-ro, Gangnam-gu, Seoul, South Korea</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:seojoon.park@elec-distributor.com">seojoon.park@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Seoul</span>
+                                <span class="feature-tag">Semiconductor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Australia Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇦🇺</div>
+                        <div class="module-content">
+                            <h3>Australia Office</h3>
+                            <p class="module-excerpt">Australian operations serving Oceania region and mining industry applications.</p>
+                            <div class="module-meta">Asia-Pacific • Australia</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Australia Square, Level 33<br>264 George Street, Sydney NSW 2000, Australia</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:liam.wilson@elec-distributor.com">liam.wilson@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Sydney</span>
+                                <span class="feature-tag">Mining Industry</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- India Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇮🇳</div>
+                        <div class="module-content">
+                            <h3>India Office</h3>
+                            <p class="module-excerpt">Indian operations supporting the rapidly growing South Asian market.</p>
+                            <div class="module-meta">Asia-Pacific • India</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Worldmark 1, Aerocity<br>Indira Gandhi International Airport, New Delhi, Delhi 110037, India</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:priya.sharma@elec-distributor.com">priya.sharma@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">New Delhi</span>
+                                <span class="feature-tag">South Asia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vietnam Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇻🇳</div>
+                        <div class="module-content">
+                            <h3>Vietnam Office</h3>
+                            <p class="module-excerpt">Vietnamese operations serving Southeast Asian manufacturing hub.</p>
+                            <div class="module-meta">Asia-Pacific • Vietnam</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Lotte Center Hanoi<br>54 Liễu Giai, Cống Vị, Ba Đình, Hà Nội, Vietnam</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:an.nguyen@elec-distributor.com">an.nguyen@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Hanoi</span>
+                                <span class="feature-tag">Manufacturing Hub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Malaysia Office -->
+                    <div class="feature-module">
+                        <div class="module-icon">🇲🇾</div>
+                        <div class="module-content">
+                            <h3>Malaysia Office</h3>
+                            <p class="module-excerpt">Malaysian operations serving ASEAN markets and electronics industry.</p>
+                            <div class="module-meta">Asia-Pacific • Malaysia</div>
+                            
+                            <div style="margin: 1rem 0;">
+                                <p style="font-size: 0.9rem; color: #333; margin-bottom: 0.5rem;"><strong>📍 Address:</strong><br>Petronas Twin Tower 1<br>Kuala Lumpur City Centre, 50088 Kuala Lumpur, Malaysia</p>
+                                <p style="font-size: 0.9rem; color: #333;">📧 <a href="mailto:siti.nurhaliza@elec-distributor.com">siti.nurhaliza@elec-distributor.com</a></p>
+                            </div>
+                            
+                            <div class="module-features">
+                                <span class="feature-tag">Kuala Lumpur</span>
+                                <span class="feature-tag">ASEAN Hub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fixed Sidebar Contact Buttons -->
+    <div class="fixed-contact-sidebar">
+        <a href="https://wa.me/8615013702378" target="_blank" class="sidebar-contact-btn whatsapp" title="Contact via WhatsApp">
+            <div class="btn-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.457-.226-2.764-1.35-3.162-1.506-.398-.156-.675-.234-.953.234-.277.468-1.194 1.506-1.412 1.784-.218.278-.435.307-.892.082-.457-.226-1.744-.635-3.284-2.006-1.186-1.072-1.978-2.372-2.195-2.827-.217-.455-.022-.661.204-.886.207-.203.461-.526.687-.743.226-.217.305-.375.461-.652.156-.277.084-.494-.029-.72-.112-.226-.902-2.532-1.27-3.442-.357-.883-.721-.771-.972-.783-.238-.012-.515-.015-.792-.015s-.716.113-1.113.568c-.397.455-1.584 1.581-1.584 3.887 0 2.306 1.643 4.551 1.869 4.828.226.277 3.179 5.112 7.175 7.161 1.001.513 1.784.819 2.396.994 1.007.287 1.923.247 2.647.15.807-.108 2.723-1.103 3.091-2.182.368-1.079.368-1.98.255-2.177-.113-.197-.335-.291-.792-.517z"/>
+                </svg>
+            </div>
+            <div class="btn-content">
+                <span class="btn-title">WhatsApp</span>
+                <span class="btn-number">+86 156 1370 2378</span>
+            </div>
+        </a>
+
+        <a href="#wechat" class="sidebar-contact-btn wechat" title="Contact via WeChat">
+            <div class="btn-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.5 6.5C4.36 6.5 1 9.36 1 12.5c0 1.71.82 3.24 2.13 4.24-.13.6-.63 2.26-1.13 3.26 0 0 1.5-.5 3.5-2 .63.13 1.28.2 1.5.2 3.64 0 6.5-2.36 6.5-5.5s-2.86-5.2-6.5-5.2zm-2.5 7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+                    <path d="M16 0c-4.42 0-8 3.08-8 6.5 0 1.87.87 3.55 2.25 4.69-.07.33-.34 1.23-.61 1.78 0 0 .81-.27 1.89-1.08.34.07.7.11 1.09.11 4.42 0 8-3.08 8-6.5S20.42 0 16 0zm-3 5.5c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm6 0c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1z"/>
+                </svg>
+            </div>
+            <div class="btn-content">
+                <span class="btn-title">WeChat</span>
+                <span class="btn-number">+86 186 1251 8271</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h4>About LiTong</h4>
+                    <p>LiTong is a leading, officially authorized core distributor for CRRC Times Electric (tec.crrczic) Power Semiconductors.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products/index.html">Products</a></li>
+                        <li><a href="solutions/index.html">Solutions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Product Lines</h4>
+                    <ul>
+                        <li><a href="products/igbt-modules/index.html">IGBT Modules</a></li>
+                        <li><a href="products/sic-devices/index.html">SiC Devices</a></li>
+                        <li>FRD Modules</li>
+                        <li>Thyristors / IGCTs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>123 Technology Park Avenue<br>Shenzhen, Guangdong, China<br>Email: sales@elec-distributor.com<br>Phone: +86-755-8888-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LiTong Electronics. All Rights Reserved. | CRRC Times Electric (tec.crrczic) Core Power Semiconductor Distributor</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

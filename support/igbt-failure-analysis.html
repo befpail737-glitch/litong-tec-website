@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 7 IGBT Failure Modes: An FAE's Guide | LiTong</title>
+    <meta name="description" content="A technical guide from LiTong's FAEs on common IGBT failure modes, including short-circuit, over-voltage, and overheating, and how to prevent them in your design.">
+    <link rel="canonical" href="https://crrc.elec-distributor.com/support/igbt-failure-analysis.html" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="../index.html" class="logo">
+                <img src="../logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products/index.html">Products</a></li>
+                    <li><a href="../solutions/index.html">Solutions</a></li>
+                    <li><a href="index.html" class="active">Technical Support</a></li>
+                    <li><a href="../news/index.html">News</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="../contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Technical Support</a></li>
+                    <li class="active">IGBT Failure Analysis</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Article Content -->
+        <section class="section">
+            <div class="container">
+                <div class="article-content">
+                    <h1>Top 7 Common Failure Modes in IGBT Modules: An FAE's Perspective</h1>
+                    <p class="article-meta">By LiTong FAE Team | Published on: August 18, 2025 | Category: Failure Analysis</p>
+                    <p>Understanding why IGBTs fail is the first step to designing a robust and reliable system. Here are some of the most common failure modes we encounter in the field and how to mitigate them.</p>
+
+                    <h2>1. Short-Circuit Failure</h2>
+                    <p><strong>Cause:</strong> A low-impedance path across the DC link, causing massive current to flow through the IGBT.</p>
+                    <p><strong>Prevention:</strong> A fast-acting gate driver with DESAT (desaturation) protection is essential. It must detect the event and safely shut down the IGBT within its rated Short-Circuit Withstand Time (typically 5-10µs). Modules like the <a href="../products/igbt-modules/t-igbt-h3300.html">T-IGBT-H3300</a> have enhanced short-circuit ruggedness.</p>
+
+                    <h2>2. Overheating / Thermal Runaway</h2>
+                    <p><strong>Cause:</strong> Inadequate cooling, incorrect mounting, or exceeding the module's power dissipation limits.</p>
+                    <p><strong>Prevention:</strong> Perform careful thermal calculations. Ensure your heatsink is correctly sized, use the recommended type and thickness of thermal paste, and apply the correct mounting torque to the module's screws.</p>
+
+                    <h2>3. Over-Voltage Failure</h2>
+                    <p><strong>Cause:</strong> Voltage overshoot during turn-off, caused by parasitic inductance in the DC busbar.</p>
+                    <p><strong>Prevention:</strong> Minimize the inductance between the DC-link capacitor and the IGBT module. Use laminated busbars and select a high-quality, low-ESL capacitor.</p>
+                    
+                    <h2>4. Gate Oxide Breakdown</h2>
+                    <p><strong>Cause:</strong> Applying excessive voltage to the gate terminal (Vge), often from ESD or a faulty gate driver.</p>
+                    <p><strong>Prevention:</strong> Use proper ESD handling procedures. Ensure your gate driver voltage is well-regulated and clamped within the datasheet limits.</p>
+
+                    <h2>5. Miller Turn-On (dV/dt Induced Turn-On)</h2>
+                    <p><strong>Cause:</strong> Rapid voltage change across the collector-emitter during turn-off can induce current in the gate-emitter loop, potentially turning the IGBT on unintentionally.</p>
+                    <p><strong>Prevention:</strong> Use a negative gate bias (-5V to -15V) to provide gate-emitter margin. Minimize gate loop inductance. Consider active Miller clamps for critical applications.</p>
+
+                    <h2>6. Excessive Cycling Fatigue</h2>
+                    <p><strong>Cause:</strong> Repeated thermal cycling during normal operation causes mechanical stress and eventual failure at bond wires or solder joints.</p>
+                    <p><strong>Prevention:</strong> Select modules with proven power cycling capability like the <a href="../products/igbt-modules/t-igbt-w1700.html">T-IGBT-W1700</a>. Optimize thermal design to minimize temperature swings. Use appropriate lifetime prediction models.</p>
+
+                    <h2>7. Moisture/Corrosion Related Failures</h2>
+                    <p><strong>Cause:</strong> Exposure to humidity, salt spray, or corrosive environments can lead to degradation of electrical connections and insulation.</p>
+                    <p><strong>Prevention:</strong> Ensure proper IP ratings for enclosures. Use conformal coating where appropriate. Select modules with robust environmental ratings. Follow proper storage and handling procedures.</p>
+
+                    <h2>Conclusion</h2>
+                    <p>By understanding these common failure modes and implementing appropriate design practices, you can significantly improve the reliability and lifespan of your IGBT-based systems. As a core distributor for CRRC Times Electric, LiTong provides comprehensive technical support to help you avoid these pitfalls and successfully implement robust power electronic solutions.</p>
+
+                    <div class="article-footer">
+                        <h3>About the Authors</h3>
+                        <p>The LiTong FAE Team consists of experienced power electronics engineers who provide design assistance and technical support for customers implementing IGBT solutions. We have extensive experience in failure analysis and reliability engineering for applications ranging from industrial motor drives to grid-scale power converters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Resources -->
+        <section class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">Related Technical Resources</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3><a href="igbt-driver-design.html">IGBT Gate Driver Design</a></h3>
+                        <p>Essential considerations for designing robust gate driver circuits.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="../products/igbt-modules/t-igbt-h3300.html">T-IGBT-H3300 Product Details</a></h3>
+                        <p>Complete technical specifications for our flagship rail transit IGBT module.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="../products/igbt-modules/index.html">IGBT Module Portfolio</a></h3>
+                        <p>Overview of CRRC Times Electric's complete IGBT module range.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h4>About LiTong</h4>
+                    <p>LiTong is a leading, officially authorized core distributor for CRRC Times Electric (tec.crrczic) Power Semiconductors.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../products/index.html">Products</a></li>
+                        <li><a href="../solutions/index.html">Solutions</a></li>
+                        <li><a href="index.html">Technical Support</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Design Resources</h4>
+                    <ul>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="design-tools.html">Design Tools</a></li>
+                        <li><a href="reference-designs.html">Reference Designs</a></li>
+                        <li><a href="knowledge-base.html">Knowledge Base</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Technical Support</h4>
+                    <p>FAE Team: support@elec-distributor.com<br>Phone: +86-123-4567-8901<br>Response: 24 Hours</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LiTong Electronics. All Rights Reserved. | CRRC Times Electric (tec.crrczic) Core Power Semiconductor Distributor</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://crrc.elec-distributor.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://crrc.elec-distributor.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://crrc.elec-distributor.com/vn/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://crrc.elec-distributor.com/kr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://crrc.elec-distributor.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://crrc.elec-distributor.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://crrc.elec-distributor.com/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Product Pages -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/igbt-modules/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/sic-devices/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/sensors/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/supercapacitors/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/frd-modules/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/products/thyristors/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- GEO Pages -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/usa/</loc>
+    <xhtml:link rel="alternate" hreflang="en-us" href="https://crrc.elec-distributor.com/usa/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://crrc.elec-distributor.com/de/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/in/</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://crrc.elec-distributor.com/in/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/vn/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://crrc.elec-distributor.com/vn/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/kr/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://crrc.elec-distributor.com/kr/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/it/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://crrc.elec-distributor.com/it/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/pl/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://crrc.elec-distributor.com/pl/"/>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Application Pages -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/applications/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/applications/rail-transit/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/applications/ev-charging/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/applications/renewable-energy/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/applications/industrial/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Support Pages -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/about/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/contact/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/quote/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/datasheets/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/quality/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

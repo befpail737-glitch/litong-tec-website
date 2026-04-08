@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式测试页面 - 技术支持文章 | LiTong</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .test-section {
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .test-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">LiTong Logo</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="support/index.html" class="active">Technical Support</a></li>
+                    <li><a href="news/index.html">News</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li class="active">样式测试</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container article-content">
+                <h1>技术支持文章样式测试页面</h1>
+                <p class="article-meta">By LiTong Team | 测试日期: 今天 | 类别: 样式测试</p>
+                <p>此页面用于测试技术支持文章的样式显示是否正确。</p>
+
+                <h2>标题样式测试</h2>
+                <p>检查各级标题的显示效果：</p>
+                
+                <h3>三级标题样式</h3>
+                <p>这是三级标题下的段落文本。</p>
+                
+                <h2>列表样式测试</h2>
+                <p>检查无序列表和有序列表的显示：</p>
+                
+                <ul>
+                    <li>无序列表项目 1</li>
+                    <li>无序列表项目 2</li>
+                    <li>无序列表项目 3</li>
+                </ul>
+                
+                <ol>
+                    <li>有序列表项目 1</li>
+                    <li>有序列表项目 2</li>
+                    <li>有序列表项目 3</li>
+                </ol>
+
+                <h2>引用框样式测试</h2>
+                <blockquote>
+                    <strong>重要提示:</strong> 这是一个引用框测试，用于显示重要的技术提示或注意事项。
+                </blockquote>
+
+                <h2>网格布局测试</h2>
+                <div class="test-grid">
+                    <div class="test-card">
+                        <h3>测试卡片 1</h3>
+                        <p>这是第一个测试卡片的内容。</p>
+                    </div>
+                    <div class="test-card">
+                        <h3>测试卡片 2</h3>
+                        <p>这是第二个测试卡片的内容。</p>
+                    </div>
+                </div>
+
+                <div class="article-footer">
+                    <h3>关于测试</h3>
+                    <p>如果此页面显示正常，则说明技术支持文章的样式问题已修复。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h4>关于 LiTong</h4>
+                    <p>LiTong 是 CRRC Times Electric 的核心授权分销商。</p>
+                </div>
+                <div>
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="products/index.html">产品</a></li>
+                        <li><a href="support/index.html">技术支持</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>资源</h4>
+                    <ul>
+                        <li><a href="#">文档</a></li>
+                        <li><a href="#">设计工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>联系方式</h4>
+                    <p>测试联系信息</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LiTong Electronics. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

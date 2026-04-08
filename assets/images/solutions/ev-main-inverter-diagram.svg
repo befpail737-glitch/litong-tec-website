@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+<!-- Background -->
+<rect width="400" height="300" fill="#f8f9fa"/>
+
+<!-- Battery Pack -->
+<rect x="20" y="120" width="60" height="60" rx="8" fill="#0033a0" stroke="#002269" stroke-width="2"/>
+<text x="50" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">800V</text>
+<text x="50" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Battery</text>
+
+<!-- DC Link -->
+<line x1="80" y1="150" x2="120" y2="150" stroke="#333" stroke-width="3"/>
+<text x="100" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">DC Bus</text>
+
+<!-- Main Inverter -->
+<rect x="120" y="100" width="100" height="100" rx="8" fill="#0d6efd" stroke="#0033a0" stroke-width="2"/>
+<text x="170" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">SiC Inverter</text>
+<text x="170" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">T-SiC-M1200</text>
+<text x="170" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">3-Phase PWM</text>
+<text x="170" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">800V → AC</text>
+<text x="170" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Efficiency >98%</text>
+
+<!-- AC Lines -->
+<line x1="220" y1="130" x2="260" y2="130" stroke="#ff6b35" stroke-width="3"/>
+<line x1="220" y1="150" x2="260" y2="150" stroke="#ff6b35" stroke-width="3"/>
+<line x1="220" y1="170" x2="260" y2="170" stroke="#ff6b35" stroke-width="3"/>
+<text x="240" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">AC</text>
+
+<!-- Motor -->
+<circle cx="300" cy="150" r="40" fill="#28a745" stroke="#1e7e34" stroke-width="2"/>
+<text x="300" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">Motor</text>
+<text x="300" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">PM/Induction</text>
+
+<!-- Drivetrain -->
+<line x1="340" y1="150" x2="380" y2="150" stroke="#333" stroke-width="4"/>
+<circle cx="380" cy="150" r="8" fill="#333"/>
+<text x="360" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Drivetrain</text>
+
+<!-- Control System -->
+<rect x="140" y="30" width="60" height="40" rx="4" fill="#6c757d" stroke="#495057" stroke-width="1"/>
+<text x="170" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">Control</text>
+<text x="170" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">MCU + DSP</text>
+
+<!-- Control Lines -->
+<line x1="170" y1="70" x2="170" y2="100" stroke="#6c757d" stroke-width="2" stroke-dasharray="3,3"/>
+
+<!-- Cooling System -->
+<rect x="250" y="220" width="80" height="30" rx="4" fill="#17a2b8" stroke="#138496" stroke-width="1"/>
+<text x="290" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">Liquid Cooling</text>
+<text x="290" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Thermal Management</text>
+
+<!-- Cooling Lines -->
+<line x1="170" y1="200" x2="250" y2="235" stroke="#17a2b8" stroke-width="2" stroke-dasharray="2,2"/>
+
+<!-- Features -->
+<text x="20" y="280" font-family="Arial, sans-serif" font-size="11" fill="#0033a0" font-weight="bold">Key Features:</text>
+<text x="20" y="295" font-family="Arial, sans-serif" font-size="9" fill="#333">• Ultra-fast charging capability • High power density • Superior efficiency</text>
+
+<!-- Title -->
+<text x="200" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0033a0" font-weight="bold">800V EV Main Inverter Solution</text>
+</svg>

@@ -1,0 +1,73 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://crrc.elec-distributor.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /admin
+Disallow: /cart/
+Disallow: /cart
+Disallow: /checkout/
+Disallow: /checkout
+Disallow: /account/
+Disallow: /account
+Disallow: /api/
+Disallow: /api
+Disallow: /internal/
+Disallow: /internal
+
+# Disallow search results
+Disallow: /search?
+Disallow: /search
+Disallow: /*?q=
+Disallow: /*?search=
+
+# Disallow filtered results
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*?page=
+
+# Allow important pages
+Allow: /products/
+Allow: /products
+Allow: /applications/
+Allow: /applications
+Allow: /services/
+Allow: /services
+Allow: /resources/
+Allow: /resources
+Allow: /about/
+Allow: /about
+Allow: /contact/
+Allow: /contact
+Allow: /quote/
+Allow: /quote
+
+# Country pages
+Allow: /usa/
+Allow: /de/
+Allow: /in/
+Allow: /vn/
+Allow: /jp/
+Allow: /kr/
+Allow: /fr/
+Allow: /it/
+Allow: /pl/
+Allow: /mx/
+Allow: /my/
+Allow: /tr/
+
+# Crawl rate
+Crawl-delay: 1
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Bingbot specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
