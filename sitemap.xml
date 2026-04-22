@@ -60,6 +60,28 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Product Detail Pages (New) -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/pages/products/igbt-modules/tim1200fsm33-psa011.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://crrc.elec-distributor.com/pages/products/sic-devices/tmm1200g17-psa011.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Support Pages (New) -->
+  <url>
+    <loc>https://crrc.elec-distributor.com/pages/support/igbt-module-selection-guide.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- GEO Pages -->
   <url>
     <loc>https://crrc.elec-distributor.com/usa/</loc>

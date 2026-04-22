@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGBT Module Selection Guide | Voltage, Current, Cooling | LiTong</title>
+    <meta name="description" content="Complete IGBT module selection guide: voltage rating, current calculation, package selection & thermal design. Free technical support from CRRC distributor.">
+    <link rel="canonical" href="https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="IGBT Module Selection Guide | Complete Technical Guide for Engineers">
+    <meta property="og:description" content="Learn how to select the right IGBT module: voltage, current, package & cooling design. Free technical support from authorized CRRC distributor.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html">
+    <meta property="og:image" content="https://www.litong-tec.com/assets/images/support/og-igbt-guide.jpg">
+    <meta property="article:published_time" content="2026-04-22">
+    <meta property="article:author" content="LiTong Technical Team">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "IGBT Module Selection Complete Guide: Voltage, Current, Package & Thermal Design",
+          "description": "Complete guide for selecting IGBT modules: voltage rating, current calculation, package selection, and thermal design considerations.",
+          "image": "https://www.litong-tec.com/assets/images/support/igbt-selection-guide.jpg",
+          "author": {
+            "@type": "Organization",
+            "name": "LiTong Technical Team",
+            "url": "https://www.litong-tec.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "LiTong Technology",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.litong-tec.com/logos/litong-logo.svg"
+            }
+          },
+          "datePublished": "2026-04-22",
+          "dateModified": "2026-04-22",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Select the Right IGBT Module",
+          "description": "Step-by-step guide for selecting IGBT modules for your power electronics application.",
+          "totalTime": "PT30M",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "value": "0"
+          },
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Determine Voltage Rating",
+              "text": "IGBT voltage rating should be 2-3 times the maximum DC bus voltage. Common ratings: 600V for household appliances, 1200V for industrial drives, 1700V for medium-voltage applications.",
+              "url": "https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html#voltage"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Calculate Current Requirements",
+              "text": "Calculate RMS current based on output power, then apply overload factor (1.5x for industrial, 2.5x for traction) and derating for temperature and switching frequency.",
+              "url": "https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html#current"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Select Package Type",
+              "text": "Choose package based on current rating and cooling method: 34mm standard for 100-600A, 62mm for 200-900A, PrimePACK for high power applications.",
+              "url": "https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html#package"
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Design Thermal Management",
+              "text": "Calculate thermal resistance network: Rth(j-c) + Rth(c-s) + Rth(s-a). Ensure junction temperature stays below Tj_max with adequate margin.",
+              "url": "https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html#thermal"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What voltage rating should I choose for my IGBT module?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IGBT voltage rating should be 2-3 times your maximum DC bus voltage. For 400V AC drives (540V DC bus), use 1200V IGBTs. For 690V AC drives (1000V DC bus), use 1700V IGBTs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I calculate the current rating for my application?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Calculate RMS current from output power: Irms = Pout / (√3 × Vline × η × PF). Then multiply by overload factor (1.5x for industrial, 2.0x for heavy duty, 2.5x for traction) and apply temperature derating."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.litong-tec.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Support",
+              "item": "https://www.litong-tec.com/pages/support/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "IGBT Selection Guide",
+              "item": "https://www.litong-tec.com/pages/support/igbt-module-selection-guide.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        .toc { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .toc h3 { margin-top: 0; }
+        .toc ul { list-style: none; padding-left: 0; }
+        .toc li { margin: 8px 0; }
+        .toc a { color: #0066cc; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .step-number { display: inline-block; width: 30px; height: 30px; background: #0066cc; color: white; text-align: center; line-height: 30px; border-radius: 50%; margin-right: 10px; font-weight: bold; }
+        .formula-box { background: #f0f8ff; border-left: 4px solid #0066cc; padding: 15px; margin: 15px 0; font-family: monospace; }
+        .checklist { background: #f8fff8; border: 1px solid #4caf50; padding: 20px; border-radius: 8px; }
+        .checklist ul { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; color: #4caf50; font-weight: bold; margin-right: 5px; }
+        .highlight-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; }
+        .case-study { background: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="../../index.html" class="logo">
+                <img src="../../logos/litong-logo.svg" alt="LiTong Logo" style="height: 40px;">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../products/">Products</a></li>
+                    <li><a href="../solutions/">Solutions</a></li>
+                    <li><a href="./" class="active">Technical Support</a></li>
+                    <li><a href="../../news/index.html">News</a></li>
+                    <li><a href="../../about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <a href="../../contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="./">Support</a></li>
+                    <li class="active">IGBT Selection Guide</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container">
+                <h1>IGBT模块选型完整指南</h1>
+                <p class="hero-subtitle">电压、电流、封装与散热设计 - 帮助电力电子工程师系统性地选择适合应用的IGBT模块</p>
+            </div>
+        </div>
+
+        <!-- TL;DR Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-highlight">
+                    <h2>核心要点 (TL;DR)</h2>
+                    <p>本指南帮助电力电子工程师系统性地选择适合应用的IGBT模块。关键选型步骤：<strong>1）确定电压等级</strong>（通常2-3倍直流母线电压）；<strong>2）计算电流需求</strong>（考虑过载倍数和散热条件）；<strong>3）选择封装类型</strong>（标准34mm、62mm或定制封装）；<strong>4）设计散热系统</strong>（确保结温不超过125-150°C）。作为<strong>CRRC授权分销商</strong>，力通提供免费选型咨询、样品支持和应用工程服务。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience -->
+        <section class="section">
+            <div class="container">
+                <h2>本文适合谁阅读？</h2>
+                <p>本文面向以下专业人士：</p>
+                <ul>
+                    <li><strong>电力电子工程师</strong>：负责逆变器、变频器、电源设计</li>
+                    <li><strong>系统架构师</strong>：规划电力电子系统拓扑</li>
+                    <li><strong>采购经理</strong>：需要了解技术规格以评估供应商</li>
+                    <li><strong>技术支持人员</strong>：为客户提供IGBT选型建议</li>
+                </ul>
+                <p>无论您是设计工业变频器、新能源逆变器，还是电动汽车驱动系统，本指南都将帮助您做出正确的IGBT选型决策。</p>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="toc">
+                    <h3>目录 (Table of Contents)</h3>
+                    <ul>
+                        <li><a href="#step1">第一步：确定电压等级</a></li>
+                        <li><a href="#step2">第二步：计算电流需求</a></li>
+                        <li><a href="#step3">第三步：选择封装类型</a></li>
+                        <li><a href="#step4">第四步：散热系统设计</a></li>
+                        <li><a href="#step5">第五步：门极驱动设计</a></li>
+                        <li><a href="#examples">选型实例分析</a></li>
+                        <li><a href="#mistakes">常见选型错误及避免方法</a></li>
+                        <li><a href="#support">力通技术支持服务</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 1: Voltage -->
+        <section class="section" id="step1">
+            <div class="container">
+                <h2><span class="step-number">1</span>第一步：确定电压等级</h2>
+                
+                <h3>电压选型基本原则</h3>
+                <p>IGBT模块的电压等级（Vces）必须能够承受系统中的最高电压，并留有足够的安全裕量。</p>
+
+                <h4>标准电压等级</h4>
+                <div class="table-responsive">
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>电压等级</th>
+                                <th>典型应用</th>
+                                <th>直流母线电压范围</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>600V</strong></td>
+                                <td>家用电器、低压变频器</td>
+                                <td>200-400V DC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1200V</strong></td>
+                                <td>工业变频器、光伏逆变器</td>
+                                <td>400-800V DC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1700V</strong></td>
+                                <td>中压变频器、风电变流器</td>
+                                <td>800-1200V DC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3300V</strong></td>
+                                <td>轨道交通、高压传动</td>
+                                <td>1500-2500V DC</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4500V+</strong></td>
+                                <td>高铁牵引、HVDC</td>
+                                <td>2500V+ DC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>电压选型公式</h3>
+                <div class="formula-box">
+                    Vces ≥ Vdc_max × 安全系数<br><br>
+                    其中：<br>
+                    - Vdc_max = 直流母线最大电压（考虑过压情况）<br>
+                    - 安全系数 = 通常2.0-2.5（工业应用）<br>
+                    - 安全系数 = 2.5-3.0（轨道交通等高可靠性应用）
+                </div>
+
+                <div class="highlight-box">
+                    <strong>示例</strong>：<br>
+                    • 690V AC变频器：直流母线≈1000V → 选择<strong>1700V IGBT</strong><br>
+                    • 380V AC变频器：直流母线≈540V → 选择<strong>1200V IGBT</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2: Current -->
+        <section class="section bg-light" id="step2">
+            <div class="container">
+                <h2><span class="step-number">2</span>第二步：计算电流需求</h2>
+                
+                <h3>电流计算方法</h3>
+                <p>IGBT模块的电流额定值基于特定散热条件（通常Tc=80°C）。实际选型需要考虑以下因素：</p>
+
+                <h4>1. 计算RMS电流</h4>
+                <p>对于三相逆变器应用：</p>
+                <div class="formula-box">
+                    Irms = Pout / (√3 × Vline × η × PF)<br><br>
+                    其中：<br>
+                    - Pout = 输出功率（kW）<br>
+                    - Vline = 线电压（V）<br>
+                    - η = 系统效率（通常0.95-0.98）<br>
+                    - PF = 功率因数（通常0.8-0.9）
+                </div>
+
+                <div class="highlight-box">
+                    <strong>示例</strong>：100kW变频器，400V输出，效率96%，功率因数0.85<br>
+                    Irms = 100,000 / (1.732 × 400 × 0.96 × 0.85) = <strong>177A RMS</strong>
+                </div>
+
+                <h4>2. 考虑过载能力</h4>
+                <div class="table-responsive">
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>应用类型</th>
+                                <th>过载倍数</th>
+                                <th>持续时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>一般工业</td>
+                                <td>1.5倍</td>
+                                <td>60秒</td>
+                            </tr>
+                            <tr>
+                                <td>重载启动</td>
+                                <td>2.0倍</td>
+                                <td>30秒</td>
+                            </tr>
+                            <tr>
+                                <td>轨道交通</td>
+                                <td>2.5倍</td>
+                                <td>60秒</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>3. 选择模块电流等级</h4>
+                <div class="formula-box">
+                    Ic_module ≥ Irms × 过载倍数 / 降额系数<br><br>
+                    降额系数考虑：<br>
+                    - 高温环境（>40°C）：0.8-0.9<br>
+                    - 高开关频率（>10kHz）：0.8-0.9<br>
+                    - 自然冷却（无强制风冷）：0.6-0.7
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Package -->
+        <section class="section" id="step3">
+            <div class="container">
+                <h2><span class="step-number">3</span>第三步：选择封装类型</h2>
+                
+                <h3>常见IGBT封装对比</h3>
+                <div class="table-responsive">
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>封装类型</th>
+                                <th>电流范围</th>
+                                <th>典型应用</th>
+                                <th>散热方式</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>34mm标准模块</strong></td>
+                                <td>100-600A</td>
+                                <td>通用变频器、UPS</td>
+                                <td>风冷/水冷</td>
+                            </tr>
+                            <tr>
+                                <td><strong>62mm模块</strong></td>
+                                <td>200-900A</td>
+                                <td>大功率变频器、光伏</td>
+                                <td>风冷/水冷</td>
+                            </tr>
+                            <tr>
+                                <td><strong>EconoDUAL</strong></td>
+                                <td>300-600A</td>
+                                <td>紧凑型设计</td>
+                                <td>风冷</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PrimePACK</strong></td>
+                                <td>450-1400A</td>
+                                <td>轨道交通、风电</td>
+                                <td>水冷</td>
+                            </tr>
+                            <tr>
+                                <td><strong>XHP</strong></td>
+                                <td>600-1800A</td>
+                                <td>高功率密度应用</td>
+                                <td>水冷</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>封装选型考虑因素</h3>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h4>1. 散热性能</h4>
+                        <ul>
+                            <li>热阻（Rth(j-c)）：越低越好</li>
+                            <li>基板材料：Al2O3（标准）vs AlN（高性能）vs Si3N4（高可靠性）</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h4>2. 电气连接</h4>
+                        <ul>
+                            <li>端子类型：螺钉端子 vs 焊接端子</li>
+                            <li>爬电距离：高污染等级应用需要更大爬电距离</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h4>3. 机械安装</h4>
+                        <ul>
+                            <li>安装孔位：标准34mm、62mm等</li>
+                            <li>紧固力矩：遵循制造商规范（通常3-5N·m）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Thermal -->
+        <section class="section bg-light" id="step4">
+            <div class="container">
+                <h2><span class="step-number">4</span>第四步：散热系统设计</h2>
+                
+                <h3>热阻模型</h3>
+                <p>IGBT模块的热传递路径可以用热阻网络表示：</p>
+                <div class="formula-box">
+                    Tj = Ta + Ploss × (Rth(j-c) + Rth(c-s) + Rth(s-a))<br><br>
+                    其中：<br>
+                    - Tj = 结温（必须&lt; Tj_max）<br>
+                    - Ta = 环境温度<br>
+                    - Ploss = 总损耗（导通损耗+开关损耗）<br>
+                    - Rth(j-c) = 结到壳热阻（模块规格书）<br>
+                    - Rth(c-s) = 壳到散热器热阻（导热材料）<br>
+                    - Rth(s-a) = 散热器到环境热阻（散热器设计）
+                </div>
+
+                <h3>散热器选型</h3>
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h4>风冷散热器</h4>
+                        <ul>
+                            <li>适用：中小功率（&lt;50kW）</li>
+                            <li>热阻范围：0.1-0.5 K/W</li>
+                            <li>考虑因素：风速、散热片密度、安装方向</li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <h4>水冷散热器</h4>
+                        <ul>
+                            <li>适用：大功率（&gt;50kW）、高功率密度</li>
+                            <li>热阻范围：0.01-0.05 K/W</li>
+                            <li>考虑因素：水流量、进水温度、水质</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>热设计检查清单</h3>
+                <div class="checklist">
+                    <ul>
+                        <li>计算最大结温（Tj_max）并留10-15°C裕量</li>
+                        <li>选择合适导热材料（导热硅脂或相变材料）</li>
+                        <li>确保均匀的压力分布（使用扭矩扳手）</li>
+                        <li>考虑NTC温度传感器用于监控</li>
+                        <li>高温环境（&gt;40°C）需要额外降额</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 5: Gate Driver -->
+        <section class="section" id="step5">
+            <div class="container">
+                <h2><span class="step-number">5</span>第五步：门极驱动设计</h2>
+                
+                <h3>门极驱动关键参数</h3>
+                <div class="table-responsive">
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>推荐值</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>开通电压（Vge_on）</strong></td>
+                                <td>+15V</td>
+                                <td>标准开通电压</td>
+                            </tr>
+                            <tr>
+                                <td><strong>关断电压（Vge_off）</strong></td>
+                                <td>-8V</td>
+                                <td>推荐负压关断</td>
+                            </tr>
+                            <tr>
+                                <td><strong>门极电阻（Rg）</strong></td>
+                                <td>1-10Ω</td>
+                                <td>根据开关速度调整</td>
+                            </tr>
+                            <tr>
+                                <td><strong>隔离电压</strong></td>
+                                <td>≥2500V</td>
+                                <td>基本隔离要求</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>开关速度优化</h3>
+                <div class="highlight-box">
+                    <strong>开关损耗与EMI权衡</strong>：<br>
+                    • 小Rg（1-3Ω）：开关速度快，损耗低，但EMI高<br>
+                    • 大Rg（5-10Ω）：开关速度慢，损耗高，但EMI低<br><br>
+                    <strong>推荐做法</strong>：<br>
+                    • 先使用制造商推荐Rg值<br>
+                    • 根据实际测试调整<br>
+                    • 确保Vce尖峰不超过额定值
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples -->
+        <section class="section bg-light" id="examples">
+            <div class="container">
+                <h2>选型实例分析</h2>
+                
+                <div class="case-study">
+                    <h3>案例1：100kW光伏逆变器</h3>
+                    <p><strong>应用参数</strong>：</p>
+                    <ul>
+                        <li>输出功率：100kW</li>
+                        <li>直流输入：600-1000V</li>
+                        <li>交流输出：400V三相</li>
+                        <li>开关频率：16kHz</li>
+                    </ul>
+                    <p><strong>选型过程</strong>：</p>
+                    <ol>
+                        <li><strong>电压</strong>：1000V DC母线 → 选择<strong>1200V IGBT</strong></li>
+                        <li><strong>电流</strong>：100kW/(√3×400V)≈144A → 考虑1.5倍过载 → 选择<strong>300A模块</strong></li>
+                        <li><strong>封装</strong>：标准34mm封装，风冷散热</li>
+                        <li><strong>型号推荐</strong>：CRRC TIM300FSM12-PSA011</li>
+                    </ol>
+                </div>
+
+                <div class="case-study">
+                    <h3>案例2：500kW风电变流器</h3>
+                    <p><strong>应用参数</strong>：</p>
+                    <ul>
+                        <li>输出功率：500kW</li>
+                        <li>直流母线：1200V</li>
+                        <li>开关频率：3kHz</li>
+                    </ul>
+                    <p><strong>选型过程</strong>：</p>
+                    <ol>
+                        <li><strong>电压</strong>：1200V DC → 选择<strong>1700V IGBT</strong></li>
+                        <li><strong>电流</strong>：500kW/(√3×690V)≈418A → 考虑2倍过载 → 选择<strong>800A模块</strong></li>
+                        <li><strong>封装</strong>：PrimePACK或62mm，水冷散热</li>
+                        <li><strong>型号推荐</strong>：CRRC TIM800FSM17-PSA011</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Mistakes -->
+        <section class="section" id="mistakes">
+            <div class="container">
+                <h2>常见选型错误及避免方法</h2>
+                
+                <div class="content-grid">
+                    <div class="content-block">
+                        <h3>❌ 错误1：忽视过载能力</h3>
+                        <p><strong>问题</strong>：仅按额定功率选型，导致过载时模块过热损坏。</p>
+                        <p><strong>解决</strong>：根据应用类型选择适当的过载倍数（工业1.5倍，轨道交通2.5倍）。</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>❌ 错误2：散热设计不足</h3>
+                        <p><strong>问题</strong>：散热器热阻过高，导致结温超过Tj_max。</p>
+                        <p><strong>解决</strong>：精确计算热阻网络，高温环境增加降额系数。</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>❌ 错误3：门极驱动不当</h3>
+                        <p><strong>问题</strong>：Rg选择不当导致开关损耗过高或EMI超标。</p>
+                        <p><strong>解决</strong>：参考制造商推荐值，通过测试优化。</p>
+                    </div>
+                    <div class="content-block">
+                        <h3>❌ 错误4：忽略电压尖峰</h3>
+                        <p><strong>问题</strong>：关断时Vce尖峰超过额定值，导致模块击穿。</p>
+                        <p><strong>解决</strong>：优化PCB布局（减小寄生电感），必要时使用缓冲电路。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Services -->
+        <section class="section bg-light" id="support">
+            <div class="container">
+                <h2>力通技术支持服务</h2>
+                <p>作为<strong>CRRC授权分销商</strong>，力通提供全面的IGBT选型支持：</p>
+
+                <h3>免费服务</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>✅ 选型咨询</h4>
+                        <p>根据您的应用需求推荐合适型号</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✅ 样品支持</h4>
+                        <p>提供评估样品用于原型设计</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✅ 数据手册</h4>
+                        <p>完整的技术文档和应用笔记</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✅ 参考设计</h4>
+                        <p>典型应用电路和PCB布局建议</p>
+                    </div>
+                </div>
+
+                <h3>增值服务</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔧 应用工程支持</h4>
+                        <p>复杂系统的技术咨询</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 热仿真服务</h4>
+                        <p>散热器设计和温度预测</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 失效分析</h4>
+                        <p>模块故障原因分析和改进建议</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 培训服务</h4>
+                        <p>IGBT应用技术培训</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>联系我们</h4>
+                    <p>📧 <strong>技术咨询</strong>：tech@litong-tec.com<br>
+                    📞 <strong>技术支持热线</strong>：+86-xxx-xxxx-xxxx<br>
+                    🌐 <strong>网站</strong>：www.litong-tec.com/support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="section">
+            <div class="container">
+                <h2>结论</h2>
+                <p>正确的IGBT选型需要系统性地考虑电压、电流、封装和散热四个关键因素。通过遵循本指南的选型流程，您可以为您的应用选择最合适的IGBT模块，确保系统的可靠性、效率和成本效益。</p>
+
+                <h3>快速选型检查清单</h3>
+                <div class="checklist">
+                    <ul>
+                        <li>电压等级：2-3倍直流母线电压裕量</li>
+                        <li>电流等级：考虑过载和降额系数</li>
+                        <li>封装类型：匹配功率等级和散热方式</li>
+                        <li>散热设计：确保结温不超过Tj_max</li>
+                        <li>门极驱动：优化开关速度和EMI</li>
+                        <li>保护电路：过流、过压、过热保护</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>需要帮助？</strong> 联系力通技术支持团队，获取专业的IGBT选型建议！
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container text-center">
+                <h2>获取技术支持</h2>
+                <p class="lead">有任何IGBT选型问题？我们的技术团队随时为您提供帮助。</p>
+                <a href="../../contact.html" class="btn btn-primary btn-large">Contact Technical Support</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LiTong Technology / 力通科技</h4>
+                    <p>Authorized CRRC Power Semiconductor Distributor<br>CRRC功率半导体授权分销商</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../products/">Products</a></li>
+                        <li><a href="./">Support</a></li>
+                        <li><a href="../../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact / 联系方式</h4>
+                    <p>Email: sales@litong-tec.com</p>
+                    <p>Tech Support: tech@litong-tec.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LiTong Technology. All rights reserved.</p>
+                <p class="last-updated">Last Updated: April 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
